@@ -703,6 +703,10 @@
     <Content Include="assets\webfonts\shabnam\Shabnam-Thin-FD.ttf" />
     <Content Include="assets\webfonts\shabnam\Shabnam-Thin-FD.woff" />
     <Content Include="assets\webfonts\shabnam\Shabnam-Thin-FD.woff2" />
+    <Content Include="assets\webfonts\yekan\IRANYekanX-Bold.woff" />
+    <Content Include="assets\webfonts\yekan\IRANYekanX-Bold.woff2" />
+    <Content Include="assets\webfonts\yekan\IRANYekanX-Regular.woff" />
+    <Content Include="assets\webfonts\yekan\IRANYekanX-Regular.woff2" />
     <None Include="Scripts\jquery-3.7.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.7.1.js" />
     <Content Include="Scripts\jquery-3.7.1.min.js" />
