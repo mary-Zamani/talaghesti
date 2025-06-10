@@ -1,0 +1,22 @@
+﻿.watermark {
+	background: #FFAAFF;
+}
+
+.popupControl {
+	background-color:#AAD4FF;
+	position:absolute;
+	visibility:hidden;
+}
+
+.modalBackground {
+background-color: Gray;
+    filter:alpha(opacity=50);
+    opacity: .5;
+    }
+
+.modalDialoPopup {
+    border: 3px solid #FFFFFF;
+    background-color: #90B090;
+    padding: 3px;
+    text-align: center;
+}

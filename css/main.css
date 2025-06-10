@@ -1,0 +1,159 @@
+@import url(header-footer.css);
+@import url(contact-us.css);
+@import url(sub-file.css);
+@import url(login.css);
+@font-face {
+    font-family: Vazir;
+    font-style: normal;
+    font-weight: normal;
+    src: url('../Font/Vazir.eot');
+    src: url('../Font/Vazir.eot?#iefix') format('embedded-opentype'), 
+    url('../Font/Vazir.woff2') format('woff2'), 
+    url('../Font/Vazir.woff') format('woff'), 
+    url('../Font/Vazir.ttf') format('truetype');
+}
+@font-face {
+    font-family: Vazir;
+    font-style: normal;
+    font-weight: bold;
+    src: url('../Font/Vazir-Bold.eot');
+    src: url('../Font/Vazir-Bold.eot?#iefix') format('embedded-opentype'), 
+    url('../Font/Vazir-Bold.woff2') format('woff2'), 
+    url('../Font/Vazir-Bold.woff') format('woff'), 
+    url('../Font/Vazir-Bold.ttf') format('truetype');
+}
+@font-face {
+    font-family: Vazir;
+    font-style: normal;
+    font-weight: bold;
+    src: url('../Font/Vazir-Thin.eot');
+    src: url('../Font/Vazir-Thin.eot?#iefix') format('embedded-opentype'), 
+    url('../Font/Vazir-Thin.woff2') format('woff2'), 
+    url('../Font/Vazir-Thin.woff') format('woff'), 
+    url('../Font/Vazir-Thin.ttf') format('truetype');
+}
+* {
+    direction: rtl;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Vazir', Arial, sans-serif;
+    font-weight: normal;
+    text-decoration: none;
+    scroll-behavior: smooth;
+    a {
+        color: rgb(87, 89, 67);
+    }
+}
+body {
+    overflow-y: auto;
+}
+.main-page-container-css {
+    margin: 4rem 1rem;
+    .banner-slider-css {
+        display: flex;
+        width: 75%;
+        align-items: center;
+        justify-content: center;
+        place-self: center;
+        img {
+            width: 100%;
+            display: flex;
+            border-radius: 2rem;        
+        }
+        a {
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 3rem;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+        }
+        .slider-next-btn-css {
+            right: 10rem;
+        }
+        .slider-prev-btn-css {
+            left: 10rem;
+        }
+    }
+    .slider-btns-css {
+        text-align: center;
+        margin-top: 0.4rem;
+        margin-bottom: 2rem;
+        a {
+            margin-inline: 0.4rem;
+        }
+        a:hover {
+            color: rgb(57, 58, 52);
+            transition: all 0.2s;
+        }
+    }
+    .slider-css {
+        h3 {
+            border-bottom: 1px solid;
+            color: rgb(87, 89, 67);
+            padding-bottom: 0.5rem;
+        }
+        h3, button {
+            color: rgb(87, 89, 67);
+        }
+        /* section::-webkit-scrollbar {
+            scrollbar-arrow
+        } */
+        
+        section {
+            overflow-x: auto;
+            display: grid;
+            grid-auto-flow: column;
+            grid-template-columns: repeat(4,1fr);
+            grid-auto-columns: 100%;
+            ::-webkit-scrollbar-button {
+                display: none;
+            }
+            table {
+                background-color: rgba(248, 250, 240, 0.6);
+                width: 12em;
+                margin: 1.5rem;
+                border: 1px solid rgb(87, 89, 67);
+                border-radius: 1rem;
+                -webkit-box-shadow: 0px 0px 18px -3px rgba(64,64,18,0.73);
+                -moz-box-shadow: 0px 0px 18px -3px rgba(64,64,18,0.73);
+                box-shadow: 0px 0px 18px -3px rgba(64,64,18,0.73);
+                tr {
+                    td {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        padding: 0.6rem;
+                    } 
+                }       
+                img {
+                    width: 10em;
+                    height: 10em;
+                    border-radius: 1rem;
+                }
+                a {
+                    background-color: white;
+                    border: 1px solid;
+                    border-radius: 1rem;
+                    padding: 0.2rem 2.5rem;
+                }
+                a:hover {
+                    background-color: rgba(215, 198, 5, 0.8);
+                    color: white;
+                    transition: all 0.2s;
+                }
+            }
+        }
+    }
+}
+@media(min-width:780px) {
+    .hidenpc {
+        display: none;
+    }
+}
+@media(max-width: 780px) {
+    .hidenmobile {
+        display: none;
+    }    
+}

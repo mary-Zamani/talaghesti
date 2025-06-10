@@ -1,0 +1,84 @@
+.login-container-css {
+    background-color: rgba(250, 235, 215, 0.3);
+    padding: 2rem;
+    border-radius: 1rem;
+    width: fit-content;
+    margin-inline: auto;
+    justify-content: center;
+    place-items: center;
+    height: 100vh;
+    text-align: center;
+    .login-css {
+        background-color: rgba(248, 250, 240, 0.6);
+        border: 1px solid;
+        color: rgb(87, 89, 67);
+        padding: 1rem;
+        margin-top: 3rem;
+        border-radius: 1rem;
+        backdrop-filter: blur(5px);
+        -webkit-box-shadow: 0px 0px 18px -3px rgba(64,64,18,0.73);
+        -moz-box-shadow: 0px 0px 18px -3px rgba(64,64,18,0.73);
+        box-shadow: 0px 0px 18px -3px rgba(64,64,18,0.73);
+        width: 30em;
+        height: 35em;
+        margin-inline: auto;
+        padding: 2rem 3rem;
+        h2 {
+            text-align: center;
+            font-size: 1.4rem;
+            margin-bottom: 2rem;
+            margin-top: 2rem;
+        }
+        h3 {
+            margin-bottom: 0.5rem;
+            text-align: start;
+        }
+        input {
+            margin-bottom: 1.5rem;
+            width: 100%;
+            padding: 0.5rem;
+            background-color: rgba(248, 250, 240, 0.6);
+            border: 1px solid rgb(87, 89, 67);
+            border-radius: 1rem;
+        }
+        
+        input:focus {
+            outline: none;
+        }
+        .enter-account-btn-css {
+            display: block;
+            width: 100%;
+            padding: 0.5rem;
+            font-size: 1rem;
+            margin-top: 1.5rem;
+            background-color: rgba(215, 198, 5, 0.7);
+            border: none;
+            color: white;
+            border-radius: 1rem;
+            cursor: pointer;
+        }
+        .enter-account-btn-css:hover {
+            background-color: rgba(215, 198, 5, 0.9);
+            transition: all 0.2s;
+        }
+        .pass-forget-css {
+            display: block;
+            margin-top: 0.4rem;
+            margin-bottom: 2rem;
+        }
+        .pass-forget-css:hover {
+            color: rgb(57, 58, 52);
+            transition: all 0.2s;
+        }
+        p {
+            display: inline-flex;
+        }
+        .create-account-btn-css {
+            color: rgba(166, 56, 43, 0.7);
+        }
+        .create-account-btn-css:hover {
+            color: rgba(166, 56, 43, 1);
+            transition: all 0.2s;
+        }
+    }
+}

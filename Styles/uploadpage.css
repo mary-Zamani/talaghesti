@@ -1,0 +1,175 @@
+﻿.example-panel
+{
+	background: #aac8e2;
+	padding: 6px;
+	width:736px;
+}
+.example-panel ul
+{
+	list-style:none;
+	padding:0;
+	margin:0;
+}
+
+.example-panel .to-subject-panel ul li
+{
+	padding-bottom: 4px;
+	clear:both;
+}
+
+
+.example-panel ul label
+{
+	float:left;
+	width:50px;
+	text-align:right;
+	padding: 3px;
+}
+
+
+.to-subject-panel 
+{
+	background:transparent url('../image/tosubjectBg.png') no-repeat  0 0;
+	height:48px;
+	padding:8px 0 8px 25px;
+}
+
+.to-subject-panel .text
+{
+	display:block;
+	padding:3px 68px;
+}
+
+.to-subject-panel .recipient
+{
+	color:#00156e;
+	text-decoration:underline;
+}
+
+.upload-panel
+{
+	margin-top:6px;
+	padding-bottom: 6px;
+	background:transparent url('../image/uploadBg.png') no-repeat  0 bottom;
+}
+
+.upload
+{
+	padding: 15px;
+	background:transparent url('../image/uploadTopBg.png') no-repeat  0 0;
+	height: 120px;
+}
+
+.files
+{
+	padding: 9px 15px;
+	background:transparent url('../image/filesBg.png') no-repeat  0 0;
+}
+
+.editor-panel
+{
+	margin-top:6px;
+}
+.save-button
+{
+	display:block;
+	margin-top:6px;
+	margin-left:auto;
+	width:73px;
+	height:26px;
+	background:transparent url('../image/buttonBg.png') no-repeat  0 0;
+	font: 12px/26px Arial;
+	text-align:center;
+	color:#00156e;
+	text-decoration:none;
+}
+
+.uploaded-file
+{
+	display:block;
+	float:left;
+	overflow:hidden;
+	white-space:nowrap;
+	background: transparent url('../image/check.png') no-repeat  0 0;
+}
+
+.uploaded-file .download-file
+{
+	font: 12px/20px Arial;
+	color: #000;
+	text-decoration:none;
+	margin-left:15px;
+}
+
+.uploaded-files
+{
+	padding: 10px 0 0 94px;
+	overflow:auto;
+}
+
+.uploaded-file .delete-file
+{
+	background:transparent url('../image/deleteBg.png') no-repeat  0 0;
+	font: 11px/18px Arial;
+	text-align:center;
+	width:44px;
+	height:18px;
+	margin: 0 4px;
+	display:inline-block;
+	text-decoration:none;
+	color: #000;
+}
+
+.attached-files
+{
+	background:transparent url('../image/uploadTopBg.png') no-repeat  0 0;
+	padding:10px 35px;
+}
+
+.mail-body
+{
+	margin-top:3px;
+	background:transparent url('../image/bodyTopBg.png') no-repeat  0 0;
+	padding-top:11px;
+}
+
+.mail-body-mid
+{
+	background:transparent url('../image/bodyMidBg.png') repeat-y  0 0;
+	padding: 0 25px;
+}
+
+.mail-body-bot
+{
+	background:transparent url('../image/bodyBotBg.png') no-repeat  0 0;
+	height:11px;
+}
+
+.back-button
+{
+	display:block;
+	margin-top:6px;
+	width:73px;
+	height:26px;
+	background:transparent url('../image/buttonBg.png') no-repeat  0 0;
+	font: 12px/26px Arial;
+	text-align:center;
+	color:#00156e;
+	text-decoration:none;
+}
+
+.attachment
+{
+	display:inline-block;
+	background: transparent url('../image/attachmentBg.png') no-repeat 3px 3px;
+	border: 1px solid #90b1d0;
+	padding: 4px 4px 4px 20px;
+	margin-bottom: 5px;
+	margin: 0 2px 5px 0;
+}
+
+.attachment a
+{
+	color:#00156E;
+	text-decoration:none;
+}

@@ -1,0 +1,396 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="mst.Master.cs" Inherits="narsShop.mst" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  
+<head runat="server">
+
+<title>طلافروشی نشاط - طلا قسطی</title>
+
+    <meta charset="utf-8" content="text/Html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<asp:contentplaceholder runat="server" id="cphPageMetaData"/> 
+
+ <%--   <link rel="stylesheet" href="<%=HttpContext.Current.Request.Url.GetLeftPart(UriPartial.Authority)+"/css/bootstrap.min.css"%>" type="text/css"/>--%>
+  
+
+   
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans'/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/> 
+    
+<%--    <link href="<%=HttpContext.Current.Request.Url.GetLeftPart(UriPartial.Authority)+"/neumorph/css/css/neumorphism.css" %>" rel="stylesheet" />
+    <link rel="stylesheet" href="<%=HttpContext.Current.Request.Url.GetLeftPart(UriPartial.Authority)+"/css/narsRTL.css"%>" type="text/css"/>--%>
+
+     
+<%--    <script type="text/javascript" src='<% Response.Write(ResolveClientUrl("~/Scripts/jquery-3.3.1.min.js"));%>'></script>--%>
+    <script type="text/javascript" src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js' ></script>
+<%--    <script type="text/javascript" src='<% Response.Write(ResolveClientUrl("~/Scripts/bootstrap.min.js"));%>'></script>
+    <script type="text/javascript" src='<% Response.Write(ResolveClientUrl("~/Scripts/jquery-ui.min.js"));%>'></script>
+    <script type="text/javascript" src='<% Response.Write(ResolveClientUrl("~/Scripts/jquery.countdown.min.js"));%>'></script>
+    <script type="text/javascript" src='<% Response.Write(ResolveClientUrl("~/Scripts/jquery.nice-select.min.js"));%>'></script>
+    <script type="text/javascript" src='<% Response.Write(ResolveClientUrl("~/Scripts/jquery.zoom.min.js"));%>'></script>
+    <script type="text/javascript" src='<% Response.Write(ResolveClientUrl("~/Scripts/jquery.dd.min.js"));%>'></script>
+    <script type="text/javascript" src='<% Response.Write(ResolveClientUrl("~/Scripts/jquery.slicknav.js"));%>'></script>
+    <script type="text/javascript" src='<% Response.Write(ResolveClientUrl("~/Scripts/owl.carousel.min.js"));%>'></script>
+    <script type="text/javascript" src='<% Response.Write(ResolveClientUrl("~/Scripts/main.js"));%>'></script>
+
+    <script type="text/javascript" src='<% Response.Write(ResolveClientUrl("~/neumorph/css/assets/js/neumorphism.js"));%>' ></script>--%>
+  
+ <link rel="icon" href="./Image/logo.png" type="image/x-icon" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="./Css/main.css" />
+
+
+
+      <script type="text/javascript" language="javascript">
+
+          function closepanel() {
+              $("#exampleModalCenter").modal("hide");
+          }
+          function closepanel2() {
+              $("#exampleModalCenter2").modal("hide");
+          }
+          function removefrombasket(etiket) {
+
+              __doPostBack("btn_rem", etiket);
+          }
+          function addtobasket(etikets) {
+              document.getElementById("hd_etc").value = etikets;
+              var tc = document.getElementById("hd_tok").value;
+            
+    //          if (tc == null || tc == "") {
+    //              $("#exampleModalCenter").modal("show");
+    //          }
+    //          else
+                  __doPostBack("btn_add", etikets + ":" + document.getElementById("hid_pishp").value + ":"+document.getElementById("hid_ghest").value);
+                 
+          }
+          function addtobasketafterphone() {
+              document.getElementById("hd_tok").value = document.getElementById("txt_mblno").value;
+              var etikets = document.getElementById("hd_etc").value;
+              var pishp = "";
+              var ghest = "";
+              if (document.getElementById("hid_pishp") != null) pishp = document.getElementById("hid_pishp").value;
+              if (document.getElementById("hid_ghest") != null) ghest = document.getElementById("hid_ghest").value;
+
+              __doPostBack("btn_add", etikets + ":" + pishp + ":" + ghest);
+          }
+          function DisableButtons() {
+              var inputs = document.getElementsByTagName("INPUT");
+              for (var i in inputs) {
+                  if (inputs[i].type == "button" || inputs[i].type == "submit") {
+                      inputs[i].disabled = true;
+                  }
+              }
+          }
+          function bodyonload() {
+            
+              //if ("serviceWorker" in navigator) { navigator.serviceWorker.register("/service-worker.js"); }
+
+              $('input.3dnumber').val(function (index, value) {
+
+                  var result = value.replace(/[۰]/g, '0');
+                  result = result.replace(/[۱]/g, '1');
+                  result = result.replace(/[۲]/g, '2');
+                  result = result.replace(/[۳]/g, '3');
+                  result = result.replace(/[۴]/g, '4');
+                  result = result.replace(/[٤]/g, '4');
+                  result = result.replace(/[۵]/g, '5');
+                  result = result.replace(/[٥]/g, '5');
+                  result = result.replace(/[۶]/g, '6');
+                  result = result.replace(/[٦]/g, '6');
+                  result = result.replace(/[۷]/g, '7');
+                  result = result.replace(/[۸]/g, '8');
+                  result = result.replace(/[۹]/g, '9');
+                  return result
+                      .replace(/\D/g, "")
+                      .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+              });
+
+
+              $('input.3dnumber').on('keyup', function (event) {
+
+                  
+                  $(this).attr('type', 'text');
+                  // skip for arrow keys
+                  if (event.which >= 37 && event.which <= 40) return;
+
+                  // format number
+                  $(this).val(function (index, value) {
+
+                      var result = value.replace(/[۰]/g, '0');
+                      result = result.replace(/[۱]/g, '1');
+                      result = result.replace(/[۲]/g, '2');
+                      result = result.replace(/[۳]/g, '3');
+                      result = result.replace(/[۴]/g, '4');
+                      result = result.replace(/[٤]/g, '4');
+                      result = result.replace(/[۵]/g, '5');
+                      result = result.replace(/[٥]/g, '5');
+                      result = result.replace(/[۶]/g, '6');
+                      result = result.replace(/[٦]/g, '6');
+                      result = result.replace(/[۷]/g, '7');
+                      result = result.replace(/[۸]/g, '8');
+                      result = result.replace(/[۹]/g, '9');
+
+                      return result
+                          .replace(/\D/g, "")
+                          .replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+                          ;
+                  });
+              });
+
+                  $('input.number').on('keyup', function (event) {
+                      
+                      $(this).val(function (index, value) {
+                          var result = value.replace(/[۰]/g, '0');
+                          result = result.replace(/[۱]/g, '1');
+                          result = result.replace(/[۲]/g, '2');
+                          result = result.replace(/[۳]/g, '3');
+                          result = result.replace(/[۴]/g, '4');
+                          result = result.replace(/[٤]/g, '4');
+                          result = result.replace(/[۵]/g, '5');
+                          result = result.replace(/[٥]/g, '5');
+                          result = result.replace(/[۶]/g, '6');
+                          result = result.replace(/[٦]/g, '6');
+                          result = result.replace(/[۷]/g, '7');
+                          result = result.replace(/[۸]/g, '8');
+                          result = result.replace(/[۹]/g, '9');
+                          return result;
+                      });
+
+              });
+
+              //var htmlstr = $('html').html();
+              //var contentstr = $('#printpart').html();
+              //htmlstr = htmlstr.split("</head>")[0] + "</head><body dir=RTL>" + contentstr;
+              //document.getElementById('htmlcontent').value = htmlstr;
+
+             // if (document.getElementById('hd_showpop').value == "1") {
+             //     $("#exampleModalCenter2").modal("show");
+             //     document.getElementById('hd_showpop').value = "0";
+             // }
+
+              window.onbeforeunload = DisableButtons;
+          }
+      </script>
+</head>
+
+
+<body class="bg-body" style="direction:rtl !important;text-align:right !important" onpageshow="bodyonload();">
+       <form runat="server" id="Mainform">
+
+            <header class="hidenmobile header-pc-css"
+        <div>
+            <section class="login-link-grid-css">
+                <asp:Label runat="server" ID="lbl_loginpart"  />
+               
+                <p>با پول کم هم می شه طلا خرید<i class="ri-heart-line"></i></p>
+            </section>
+            <section class="first-header-css">
+                <a href="./index.html" class="logo-img-css"><img src="./Image/logo.png" alt="logo"></a>
+                <div class="price-suggestion-css">
+                    <h3>طلا قسطی ، بدون چک ، با سود کم</h3>
+                    <table>
+                        <tr>
+                            <td><asp:TextBox runat="server" id="txt_prepay" CssClass="3dnumber" placeholder="مبلغ پیش پرداخت رو به ریال وارد کن" /></td>
+                            <td><<asp:Button runat="server" ID="dosearch" OnClick="dosearch_Click" Text="بهم پیشنهاد بده"></asp:Button></td>
+                        </tr>
+                    </table>             
+                </div>
+                <a href="" class="phone-number-css">021-55901823<i class="ri-phone-line"></i></a>
+            </section>
+            <section class="second-header-css">
+                <nav>
+                    <ul>
+                        <li class="home-page-css"><a href="./index.html"><i class="ri-home-2-line"></i>صفحه اصلی</a></li>
+                        <li class="list-menu-css"><a href=""><i class="ri-menu-line"></i> دسته‌بندی‌ها <i class="ri-arrow-down-s-line"></i></a>
+                            <ul class="sub-menu1-css">
+                                <li class="list-menu2-css"><a href="#1" >سرویس و نیم ست <i class="ri-arrow-left-s-line"></i></a>
+                                    <ul class="sub-menu2-css">
+                                        <li><a href="./sub-file.html">سرویس</a></li>
+                                        <li><a href="">نیم ست</a></li>
+                                    </ul>
+                                </li>
+                                <li class="list-menu2-css"><a href="#2" >گردنبند و پلاک<i class="ri-arrow-left-s-line"></i></a>
+                                    <ul class="sub-menu2-css">
+                                        <li><a href="">گردنبند</a></li>
+                                        <li><a href="">زنجیر</a></li>
+                                        <li><a href="">رولباسی</a></li>
+                                        <li><a href="">پلاک</a></li>
+                                    </ul>
+                                </li>
+                                <li class="list-menu2-css"><a href="#3" >انواع دستبند<i class="ri-arrow-left-s-line"></i></a>
+                                    <ul class="sub-menu2-css">
+                                        <li><a href="">دستبند</a></li>
+                                        <li><a href="">النگو</a></li>
+                                    </ul>
+                                </li>
+                                <li class="list-menu2-css"><a href="#4" >انگشتر و حلقه<i class="ri-arrow-left-s-line"></i></a>
+                                    <ul class="sub-menu2-css">
+                                        <li><a href="">حلقه ست</a></li>
+                                        <li><a href="">حلقه سولیتر</a></li>
+                                        <li><a href="">حلقه رینگی</a></li>
+                                        <li><a href="">انگشتر</a></li>
+                                    </ul>
+                                </li>
+                                <li class="last-child-sub1-css"><a href="#5">اکسسوری های دیگر <i class="ri-arrow-left-s-line"></i></a>
+                                    <ul class="sub-menu2-css">
+                                        <li><a href="">آویز ساعت</a></li>
+                                        <li><a href="">گوشواره</a></li>
+                                        <li><a href="">پیرسینگ</a></li>
+                                        <li><a href="">پابند</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+   <asp:Label runat="server" ID="lbl_shopcart" />
+                
+            </section>
+        </div>
+    </header>
+
+  
+
+   
+
+
+  
+
+        <!-- Hero -->
+<!-- End home search -->
+<!-- Page Container -->
+
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+ 
+
+<asp:ScriptManager ID="ScriptManager1" runat="server" EnablePageMethods="True"> <Services></Services> </asp:ScriptManager>
+       
+
+<asp:HiddenField runat="server" ID="hd_tok"  ClientIDMode="Static"/>
+<asp:HiddenField runat="server" ID="hd_etc"  ClientIDMode="Static"/>
+<asp:HiddenField runat="server" ID="hd_showpop" ClientIDMode="Static" />
+
+
+
+        </form>
+
+
+
+
+
+  <footer>
+        <div class="license-container-css">
+            <table>
+                <tr>
+                    <td><i class="ri-checkbox-line"></i></td>
+                    <td>
+                        <a href="./contact-us.html">
+                            <h3>تضمین 18 عیار</h3>
+                            <p>برای تمام طلاهای تمام شعب</p>
+                        </a>
+                    </td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <td><i class="ri-checkbox-line"></i></td>
+                    <td>
+                        <a href="./contact-us.html">
+                            <h3>تضمین بازگشت وجه</h3>
+                            <p>به مدت یک هفته از تاریخ فاکتور</p>
+                        </a>
+                    </td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <td><i class="ri-checkbox-line"></i></td>
+                    <td>
+                        <a href="./contact-us.html">
+                            <h3>گارانتی معاضه</h3>
+                            <p>به مدت یک ماه از تاریخ فاکتور</p>
+                        </a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="footer-container-css">
+            <div class="info-css">
+                <h3>اطلاعات فروشگاه</h3>
+                <ul>
+                    <li><a href="">قوانین و مقررات</a></li>
+                    <li><a href="./contact-us.html">تماس با ما</a></li>
+                    <li><a href="">همکاری با ما</a></li>
+                    <li><a href="">بلاگ اموزشی</a></li>
+                </ul>
+            </div>           
+            <div class="address-phone-css">
+                <h3>تماس با ما</h3>
+                <ul>
+                    <li><p>آدرس : شهرری ابتدای فداییان اسلام پلاک 28</p></li>
+                    <li><p>شعبه دوم : فلکه دوم صادقیه پاساژ طلا بالای بانک ملت پلاک 23</p></li>
+                    <li>021-55901823<i class="ri-phone-line"></i></li>
+                    <li><a href=""> <i class="ri-instagram-line"></i>اینستاگرام ما</a></li>
+                </ul>
+            </div>
+            <a href=""><img src="./Image/location-img.png" alt="store-location"></a>
+        </div>
+        <div class="compliting-about-us">
+            <article>
+                <p>این روزا دارم بیشتر به نوسانات طلا و شرایط اقتصادی جامعه فکر میکنم چون هر روز که بیدار میشم قیمت طلا یه پله صعود کرده... یکی میخواد ازدواج کنه نمیتونه حلقه ازدواج بخره، یکی میخواد برای عروسش زیرلفظی طلا بخره قیمت طلا رو که میبینه پشیمون میشه، یکی پای آبروش وسطه و.... حالا مسئولیت خوب کردن حال دل تو با منه....! یه لحظه یاد این شعر حافظ افتادم که میگه : آسمان بار امانت نتوانست کشید / قرعه کار به نام من دیوانه زدند روزی روزگاری جوون بودم و این طلافروشی رو افتتاح کردم ! ۲۵ سال میگذره و الان دیگه گرد پختگی رو سرم نشسته! ایشالا که ته دیگ نشم 😉! الان دغدغم شده رسیدن تو به آرزو هات.... دغدغه تو.... آبروت.... ازدواجت.... آیندت.... پروازیست به اوج تنهایی خودم... موقع پریدنت خوشحالم داری میپری... خیالم راحته داری سر و سامون می‌گیری و میری..... . حس هام قاطی پاتی شده... تویی که داری اینو میخونی بی معرفت نشی هرازچندگاهی که دلت برای ما تنگ شد احوالی بپرس و سری به پیج و طلافروشی نشاط بزن. به قول شاعر میگه: طلوع بی شمار معرفت باش/ به شهری که رسمش بی وفائیست جوون تر ها ازدواج کردند و پیرتر ها مردند و بچه ها تنها تر شدند و ما هنوز 25 ساله اینجاییم... ! هیچکس از فردا خبر نداره، قدر امروز و این لحظه رو بدون و از داشته هات لذت ببر... فروش اقساطی طلا از فروشگاه طلاقسطی ( طلافروشی نشاط ) با یه کادر توپ بهت کمک میکنه تا از امروزت بهتر استفاده کنی و آیندت و تضمین کنی😉 در نهایت خدای عزوجل همین حوالیه و حواسش به همه ما هست... !</p>
+            </article>
+            <a href="https://nextpay.org/nx/trust/44614" class="next-pay-logo-css"><img src="./Image/next-pay-logo.png" alt="next-pay-trust"></a>
+        </div>
+        <div class="ending-css">
+            <p>تمامی حقوق این سایت متعلق به طلا فروشی نشاط می باشد.</p>
+            <p class="motto-css">تجربه یک خرید پرنشاط با نشاط !</p>
+        </div>
+    </footer>
+
+<script  type="text/javascript" src='<% Response.Write(ResolveClientUrl("~/lib/jquery-validation/dist/jquery.validate.min.js"));%>'></script>
+<script  type="text/javascript" src='<% Response.Write(ResolveClientUrl("~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"));%>'></script>
+
+ <script type="text/javascript">
+     // Accordion
+     function myFunction(id) {
+         var x = document.getElementById(id);
+         if (x.className.indexOf("w3-show") == -1) {
+             x.className += " w3-show";
+             x.previousElementSibling.className += " w3-theme-d1";
+         } else {
+             x.className = x.className.replace("w3-show", "");
+             x.previousElementSibling.className =
+                 x.previousElementSibling.className.replace(" w3-theme-d1", "");
+         }
+     }
+
+     // Used to toggle the menu on smaller screens when clicking on the menu button
+     function openNav() {
+         var x = document.getElementById("navDemo");
+         if (x.className.indexOf("w3-show") == -1) {
+             x.className += " w3-show";
+         } else {
+             x.className = x.className.replace(" w3-show", "");
+         }
+     }
+
+if (window.location.href.indexOf("customer") != -1) {
+             $("#searchbar").hide();
+}
+     if (window.location.href.indexOf("login") != -1) {
+         $("#searchbar").hide();
+     }
+     if (window.location.href.indexOf("summery") != -1) {
+         $("#searchbar").hide();
+     }
+
+ </script>
+
+<script src="./Js/script.js"></script>
+
+</body>
+
+</html>

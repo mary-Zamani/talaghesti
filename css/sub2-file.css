@@ -1,0 +1,68 @@
+.sub2-file {
+    display: flex;
+    margin: 5rem 10rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    color: rgb(87, 89, 67);
+    align-items: center;
+    figure {
+        img {
+            width: 25em;
+            display: flex;
+            margin-inline: auto;
+            place-self: center;
+            border-radius: 1rem;
+        }
+        figcaption {
+            text-align: center;
+        }
+    }
+    table {
+        border-collapse: collapse;
+        display: grid;
+        margin-inline: auto;
+        place-items: center;
+        justify-content: center;
+        tr {
+            td {
+                border-bottom: 1px solid;
+                text-align: center;
+                width: 8em;
+                height: 3em;
+            }
+        }
+        select {
+            width: 5em;
+            border-radius: 0.4rem;
+            text-align: center;
+            display: flex;
+            margin-inline: auto;
+        }
+        input::-webkit-slider-thumb {
+            background-color: rgba(215, 198, 5, 0.8);  
+        }
+    }
+    table:last-of-type {
+        tr {
+            td {
+                width: 4.8em;
+            }
+        }
+    }
+    button {
+        margin: 2rem;
+        display: flex;
+        place-self: center;
+        text-align: center;
+        padding: 0.5rem 6rem;
+        background-color: white;
+        color: rgb(87, 89, 67);
+        border: 1px solid;
+        border-radius: 1rem;
+        cursor: pointer;
+    }
+    button:hover {
+        color: rgba(215, 198, 5, 0.8);
+        transition: all 0.2s;
+    }
+}

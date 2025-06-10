@@ -1,0 +1,111 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="mysite0.master.cs" Inherits="narswebadmin.mysite0" %>
+<%@ Register Assembly="Telerik.Web.UI" Namespace="Telerik.Web.UI" TagPrefix="telerik" %>
+<%@ Register assembly="AjaxControlToolkit" namespace="AjaxControlToolkit" tagprefix="ajax" %>
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Nars | </title>
+    
+    
+    <link href="~/Content/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/bootstrap-theme.css" rel="stylesheet" type="text/css" />
+    <link href="~/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/css/animate.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/css/prettyPhoto.css" rel="stylesheet" type="text/css" />
+    <link href="~/css/responsive.css" rel="stylesheet" type="text/css" />
+    <link href="~/css/nars.css" rel="stylesheet" type="text/css" />
+	<link href="~/css/modalPopup.css"rel="stylesheet" type="text/css" />
+
+  
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+  
+
+    <asp:ContentPlaceHolder ID="headPlaceHolder" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+
+
+    
+<body>
+
+    <form id="form1" runat="server">
+    <asp:ScriptManager ID="_scriptManager" runat="server" EnablePageMethods="true"> <Services> <asp:ServiceReference Path="~/ChatServices.asmx" /> </Services> </asp:ScriptManager>
+
+    <header id="myheader">
+    <div class="top-bar">
+    <div class="container">
+    <div class="row">
+    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+      <div class="top-number">
+      </div>
+    </div>
+    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+      <div class="top-number">
+    </div></div>
+    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+      <div class="top-number">
+          </div> </div>
+    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+      <div class="top-number">
+
+    </div></div>
+
+    </div>
+      </div><%--container--%>
+        </div><%--/top-bar--%>
+
+   
+
+     <nav class="navbar navbar-inverse" role="banner">
+            <div class="container" style="min-height:130px;display:contents">
+                <div class="navbar-header" style="width:100%;text-align:center"> 
+                    
+                </div>
+                <div class="collapse navbar-collapse navbar-right">
+ 
+       
+              </div>
+            </div><!--/.container-->
+        </nav><!--/nav-->
+ 
+     <div class="row">
+     <div class="col-sm-8">
+         
+     </div></div>
+        
+	
+
+
+
+<asp:HiddenField ID="hidensession" runat="server" />
+
+        </header>
+     	
+	<div id="container" class="container" >
+
+  
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+   </div> 
+
+    
+
+
+   
+    
+</form>
+</body>
+</html>

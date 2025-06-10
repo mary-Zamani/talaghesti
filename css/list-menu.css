@@ -1,0 +1,100 @@
+@keyframes listbghoveranim {
+    from {background-color: rgba(102, 99, 88, 0.4);}
+    to {background-color: rgba(79, 77, 74, 0.4);}
+}
+@keyframes listclhoveranim {
+    from {color: rgba(102, 99, 88, 0.4);}
+    to {color: rgba(45, 44, 42, 0.4);}
+}
+
+
+/* قسمت دوم آن اوردر لیست نویگشن بقار که مربوط به سکشن دوم میباشد  */
+.list-menu-css {
+    background-color: rgb(215, 198, 5);
+    border-top-left-radius: 1rem;
+    a {
+        color: white;
+    }
+}
+
+
+.second-header-css nav ul li {
+    position: relative;
+    display: block;
+    clear: left;
+    float: right;
+    padding: 1rem;
+    i {
+        padding-left: 0.3rem;
+    }
+    .ri-arrow-down-s-line {
+        padding-right: 5rem;
+    }
+    .sub-menu1-css{
+        display: none;
+        position: absolute;
+        right: 0;
+        margin-top: 1rem;
+        background-color: rgba(212, 207, 190, 0.9);
+        border-bottom-right-radius: 1rem;
+        z-index: 999;
+        .list-menu2-css, .last-child-sub1-css {
+            padding: 1rem;
+            border-bottom: 1px solid rgb(87, 89, 67);
+            width: 100%;          
+            text-align: right;  
+            a {
+                color: rgb(87, 89, 67);
+            }
+        }
+        .last-child-sub1-css {
+            border-bottom-right-radius: 1rem;
+            border: none;
+        }
+        .list-menu2-css:hover, .last-child-sub1-css:hover {
+            transition: all 0.4s;
+            background-color: rgba(79, 77, 74, 0.4);
+            a:hover {
+                transition: all 0.4s;
+                color: rgb(35, 35, 31);
+                padding-right: 0.3rem;
+            }
+        }
+    }
+}
+.home-page-css a:hover {
+    color: rgb(57, 58, 52);
+}
+.list-menu-css:hover ul.sub-menu1-css {
+    display: block;
+}
+.sub-menu2-css {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 243px;
+    backdrop-filter: blur(4px);
+    z-index: 999;
+    background-color: rgba(212, 207, 190, 0.5);
+    border: 1px solid rgb(87, 89, 67);
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    a {
+        white-space: nowrap;
+    }
+    li {
+        border: none;
+        width: 100%;
+    }
+    li:first-of-type {
+        border-top-left-radius: 1rem;
+    }
+    li:last-of-type {
+        border-bottom-left-radius: 1rem;
+        border-bottom-right-radius: 0;
+    }
+}
+.sub-menu1-css li:hover ul.sub-menu2-css  {
+    display: block;
+}
+

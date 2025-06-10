@@ -1,0 +1,58 @@
+@font-face {
+    font-family: 'IranSansWeb';
+    src: url('fonts/iransansweb.ttf');
+}
+body {
+    font-family: IranSansWeb;
+    font-weight: 200;
+    font-size: 1rem;
+    line-height: 1.2; 
+    text-align:Left;
+}
+
+header {
+    background-color: #202027 !important;
+}
+
+.dropdown-toggle::after {
+display:none;
+}
+
+.modalDialoPopup { 
+background: burlywood;
+padding: 10px;
+}
+
+
+#share {
+    top: 75%;
+    left: 5px;
+    position: fixed;
+    z-index: 9999;
+}
+
+    #share a {
+        width: 35px;
+        height: 35px;
+        display: block;
+        padding: 2px;
+        margin-top: 8px;
+        font-size: 14px;
+        color: #000;
+        opacity: .5;
+        transition: opacity 0.15s linear;
+    }
+
+        #share a:hover {
+            opacity: 2;
+        }
+
+    #share i {
+        font-size: 32px;
+        position: relative;
+        left: 50%;
+        top: 50%;
+        transform: translateX(-50%) translatey(-50%);
+        -webkit-transform: translateX(-50%) translatey(-50%);
+        -moz-transform: translateX(-50%) translatey(-50%);
+    }

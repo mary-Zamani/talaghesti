@@ -1,0 +1,25 @@
+﻿.RadGrid:active, .RadGrid:focus
+{
+    outline-style: none !important;
+    -moz-outline-style: none !important;
+}
+.rgEditRow
+{
+    background: none !important;
+}
+.rgRow td, .rgAltRow td, .rgEditRow td
+{
+    border: 1px solid #CFD9E7 !important;
+    padding-left: 0 !important;
+    padding-right: 2px !important;
+    padding-bottom: 0px !important;
+    padding-top: 0px !important;
+}
+.rgRow .singleSelect, .rgAltRow .singleSelect, .rgEditRow .singleSelect, .rgRow .doubleSelect, .rgAltRow .doubleSelect, .rgEditRow .doubleSelect
+{
+    border: 1px solid #01144E !important;
+}
+.rgRow .doubleSelect, .rgAltRow .doubleSelect, .rgEditRow .doubleSelect
+{
+    background: #CDFFB1 !important;
+}

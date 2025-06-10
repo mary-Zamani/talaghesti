@@ -1,0 +1,75 @@
+@import url(sub2-file.css);
+.sub-file {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 4rem 2rem;
+    .product-card-css {
+        background-color: rgba(248, 250, 240, 0.6);
+        border: 1px solid;
+        color: rgb(87, 89, 67);
+        text-align: center;
+        width: 22em;
+        padding: 1rem;
+        margin-top: 3rem;
+        border-radius: 1rem;
+        -webkit-box-shadow: 0px 0px 18px -3px rgba(64,64,18,0.73);
+        -moz-box-shadow: 0px 0px 18px -3px rgba(64,64,18,0.73);
+        box-shadow: 0px 0px 18px -3px rgba(64,64,18,0.73);
+        place-self: center;
+        img {
+            width: 20em;
+            height: auto;
+            border-radius: 1rem;
+            place-self: center;
+            display: flex;
+        }
+        div {
+            h3, p {
+                margin: 1.2rem 0;
+                font-weight: 200;
+            }
+            table {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border: 1px solid;
+                border-collapse: collapse;
+                tr {                    
+                    td {
+                        border: 1px solid;
+                        width: 6.7em;
+                        padding: 0.4rem;                    
+                    }
+                    td:first-child {border-right: none;}
+                    td:last-child {border-left: none;}
+                }
+                tr:first-child {
+                    td {border-top: none;}
+                }
+                tr:last-child {
+                    td {
+                        border-bottom: none;
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media(max-width:1150px) {
+    .sub-file {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        
+    }
+    .sub2-file {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
+@media(max-width: 780px) {
+    .sub-file {
+        display: grid;
+        grid-template-columns: 1fr;
+    }    
+}

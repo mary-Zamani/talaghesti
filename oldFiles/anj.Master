@@ -1,0 +1,252 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="anj.Master.cs" Inherits="narsShop.anj" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  
+<head>
+<title>طلافروشی نشاط - طلا قسطی</title>
+
+    <meta charset="utf-8" content="text/Html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="" />
+    <meta name="author" content=""/>
+
+
+  <!-- Google Font -->
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css" type="text/css"/>
+    <link rel="stylesheet" href="../css/font-awesome.min.css" type="text/css"/>
+    <link rel="stylesheet" href="../css/themify-icons.css" type="text/css"/>
+    <link rel="stylesheet" href="../css/elegant-icons.css" type="text/css"/>
+    <link rel="stylesheet" href="../css/owl.carousel.min.css" type="text/css"/>
+    <link rel="stylesheet" href="../css/nice-select.css" type="text/css"/>
+    <link rel="stylesheet" href="../css/jquery-ui.min.css" type="text/css"/>
+    <link rel="stylesheet" href="../css/slicknav.min.css" type="text/css"/>
+    <link rel="stylesheet" href="../css/style.css" type="text/css"/>
+    <link rel="stylesheet" href="../css/narsRTL.css" type="text/css"/>
+     
+     
+       <!-- Js Plugins -->
+    <script type="text/javascript" src="../Scripts/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="../Scripts/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../Scripts/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../Scripts/jquery.countdown.min.js"></script>
+    <script type="text/javascript" src="../Scripts/jquery.nice-select.min.js"></script>
+    <script type="text/javascript" src="../Scripts/jquery.zoom.min.js"></script>
+    <script type="text/javascript" src="../Scripts/jquery.dd.min.js"></script>
+    <script type="text/javascript" src="../Scripts/jquery.slicknav.js"></script>
+    <script type="text/javascript" src="../Scripts/owl.carousel.min.js"></script>
+    <script type="text/javascript" src="../Scripts/main.js"></script>
+  
+    
+</head>
+<body dir="rtl" onload="bodyonload()">
+
+
+ <header class="header-section">
+  <div class="header-top">
+      <div class="container">
+          <div class="ht-left">
+               <div class="mail-service">
+               <div class="top-social">
+                  <a href="#"><i class="ti-facebook"></i></a>
+                  <a href="#"><i class="ti-instagram"></i></a>
+                  <a href="#"><i class="ti-pinterest"></i></a>
+              </div>
+              
+                 
+              </div>
+              <div class="phone-service">
+                  <i class=" fa fa-phone"></i>
+                  55901823 021
+              </div>
+          </div>
+     
+          <div class="ht-right row">
+
+              <div class="col">
+                  <table><tr><td>
+                    <asp:Label runat="server" ID="lbl_loginpart" />
+             </td><td>
+                 <div class="inner-header">
+                    <asp:Label runat="server" ID="lbl_shopcart" />                  
+                     </div>
+                      </td></tr></table>
+              </div>
+
+             
+          </div>
+      </div>
+  </div>
+     <div class="nav-item">
+      <div class="container">
+                  <div class="nav-depart">
+          <img alt="نشاط" src="/images/logo.png" style="max-height:50px"/>
+              </div>                
+
+          <div class="nav-depart">
+              <div class="depart-btn">
+                  <i class="ti-menu"></i>
+                  <span>گروه محصولات</span>
+                  <ul class="depart-hover">
+                      <li class="active"><a href="#">انگشتر</a></li>
+                      <li><a href="#">النگو</a></li>
+                      <li><a href="#">حلقه</a></li>
+                      <li><a href="#">دستبند </a></li>
+                      <li><a href="#">گردن بند </a></li>
+                      <li><a href="#">گوشواره</a></li>
+                      <li><a href="#">سرویس</a></li>
+                      <li><a href="#">نیم ست</a></li>
+                      <li><a href="#">زنجیر</a></li>
+                      <li><a href="#">پلاک</a></li>
+                      <li><a href="#">حلقه</a></li>
+                  </ul>
+              </div>
+              
+          </div>
+  
+          <nav class="nav-menu mobile-menu">
+              <ul>
+                  <li class="active"><a href="/index.aspx">خانه</a></li>
+                  <li><a href="/pages/categories.aspx">گالری</a></li>
+                  <li><a href="/pages/salelist.aspx">دوشنبه قرتی</a></li>
+                  <li><a href="/pages/biojratlist.aspx">طلای بی اجرت</a></li>                 
+                  <li><a href="#">درباره ما</a>
+                      <ul class="dropdown">
+                          <li><a href="#">تماس با ما</a></li>
+                          <li><a href="#">باشگاه مشتریان</a></li>
+                          <li><a href="#">شرایط فروش</a></li>
+                          <li><a href="#">پرسش های متداول</a></li>
+                      </ul>
+                  </li>
+              </ul>
+          </nav>
+          <div id="mobile-menu-wrap"></div>
+                      
+                          
+                      
+
+      </div>
+  </div>
+ 
+  
+</header>
+    <form runat="server" id="Mainform">
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+      <asp:ScriptManager ID="ScriptManager1" runat="server" EnablePageMethods="True">
+                     <Services>
+                <asp:ServiceReference Path="~/ChatServices.asmx" />
+            </Services>
+                </asp:ScriptManager>
+        </form>
+<footer class="footer-section">
+  <div class="container">
+      <div class="row">
+          <div class="col-lg-3">
+              <div class="footer-left">
+                  <div class="footer-logo">
+                      <a href="#">نشاط (طلا قسطی)</a>
+                  </div>
+                  <ul>
+                      <li>آدرس : شهر ری ابتدای فداییان اسلام </li>
+                      <li>تلفن: 021 5590 1823</li>
+                      <li>ایمیل: tala-ghesti@gmail.com</li>
+                  </ul>
+                  <div class="footer-social">
+                      <a href="#"><i class="fa fa-facebook"></i></a>
+                      <a href="#"><i class="fa fa-instagram"></i></a>
+                      <a href="#"><i class="fa fa-pinterest"></i></a>
+                  </div>
+              </div>
+          </div>
+          <div class="col-lg-2 offset-lg-1">
+              <div class="footer-widget">
+                  <h5>اطلاعات</h5>
+                  <ul>
+                      <li><a href="#">درباره ما</a></li>
+                      <li><a href="#">شعب</a></li>
+                      <li><a href="#">تماس با ما</a></li>
+                      <li><a href="#">همکاران</a></li>
+                  </ul>
+              </div>
+          </div>
+          <div class="col-lg-2">
+              <div class="footer-widget">
+                  <h5>بخش کاربران</h5>
+                  <ul>
+                      <li><a href="#">حساب من</a></li>
+                      <li><a href="#"> سبد خرید</a></li>
+                      <li><a href="#">فروشگاه</a></li>
+                  </ul>
+              </div>
+          </div>
+          <div class="col-lg-4">
+              <div class="newslatter-item">
+                  <h5>نماد اعتماد الکترونیک</h5>
+                  <p></p>
+              </div>
+          </div>
+      </div>
+  </div>
+  <div class="copyright-reserved">
+      <div class="container">
+          <div class="row">
+              <div class="col-lg-12">
+                  <div class="copyright-text">
+                     
+تمامی حقوق این سایت متعللق به طلا فروشی نشاط می باشد . تهیه شده توسط <a href="#" target="_blank">س.س</a><i class="fa fa-heart-o" aria-hidden="true"></i>
+
+                  </div>
+                  <div class="payment-pic">
+                      <img src="img/payment-method.png" alt="" />
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</footer>
+
+<script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+<script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+
+
+<script type="text/javascript">
+                       function bodyonload() {
+
+
+                           $('input.3dnumber').val(function (index, value) {
+                               return value
+                                   .replace(/\D/g, "")
+                                   .replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+                                   ;
+                           });
+
+
+                           $('input.3dnumber').on('keyup', function (event) {
+
+                               $(this).attr('type', 'text');
+                               // skip for arrow keys
+                               if (event.which >= 37 && event.which <= 40) return;
+
+                               // format number
+                               $(this).val(function (index, value) {
+                                   return value
+                                       .replace(/\D/g, "")
+                                       .replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+                                       ;
+                               });
+
+                           });
+
+                           var htmlstr = $('html').html();
+                           var contentstr = $('#printpart').html();
+                           htmlstr = htmlstr.split("</head>")[0] +"</head><body dir=RTL>" + contentstr;
+                           document.getElementById('htmlcontent').value = htmlstr;
+                           //document.getElementById('printpart').innerHTML;
+                       }
+</script>    
+
+</body>
+
+</html>

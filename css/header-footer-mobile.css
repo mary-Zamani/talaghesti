@@ -1,0 +1,91 @@
+@import url(./sidebar.css);
+.header-mobile-css {
+    position: sticky;
+    top: 0;
+}
+.first-header-m-css {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 1rem 0;
+    background-color: white;
+    -webkit-box-shadow: 2px 13px 24px -6px rgba(182, 185, 202, 1);
+    -moz-box-shadow: 2px 13px 24px -6px rgba(182, 185, 202, 1);
+    box-shadow: 2px 13px 24px -6px rgba(182, 185, 202, 1);
+    button, .phone-number-m-css{
+        place-self: center;
+        height: fit-content;
+        width: fit-content;
+        background-color: white;
+        color: rgba(215, 198, 5, 0.8);
+        border: 1px solid;
+        border-radius: 1rem;
+        padding: 0.5rem;
+        font-size: 1.1rem;
+    }
+    button {
+        margin-left: 4rem;
+        display: inline-flex;
+        text-align: center;
+        i {
+            margin-top: 2px;
+            margin-left: 0.2rem;
+            font-size: 1.5rem;
+        }
+    }
+    a img {
+        display: block;
+        width: 6em;
+        margin-inline: auto;
+    }
+    .phone-number-m-css {
+        white-space: nowrap;
+        font-size: 0.9rem;
+    }
+    button:hover ,.phone-number-m-css:hover {
+        cursor: pointer;
+        background-color: rgba(215, 198, 5, 0.8);
+        color: white;
+        transition: all 0.5s;
+    }
+}
+.second-header-m-css {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    background-color: white;
+    border-top: 1px solid rgb(205, 206, 198);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 1rem;
+    button, a {
+        place-self: center;
+        text-align: center;
+        font-size: 1rem;
+        position: relative;
+        cursor: pointer;
+        i {
+            display: flex;
+            place-content: center;
+        }
+        p {
+            position: absolute;
+            top: -4px;
+            left: 12px;
+            font-size: 0.5rem;
+            background-color: rgba(215, 198, 5, 0.8);
+            color: white;
+            padding-inline: 0.25rem;
+            padding-top: 0.1rem;
+            border-radius: 50%;
+        }
+    }
+    button {
+        background-color: white;
+        border: none;
+        color: rgb(87, 89, 67);
+    }
+    button:hover, a:hover{
+        color: rgba(215, 198, 5, 0.8);
+        transition: color 0.2s;
+    }
+}

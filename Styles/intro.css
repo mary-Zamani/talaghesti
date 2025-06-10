@@ -1,0 +1,142 @@
+﻿body {
+}
+.txtStyle
+{
+    font-family: tahoma;
+    font-size: 12px;
+    height: 61px;
+}
+.bg
+{
+    padding: 0px;
+    text-align: center;
+    background-image: url('../image/bg01.png');
+    background-repeat: repeat;
+}
+.header
+{
+    font-family: tahoma;
+    font-size: 13px;
+    line-height: 25px;
+    font-style: normal;
+    background-color: #FFFFFF;
+    border: 1px solid #000080;
+    height: 80px;
+    padding-top: 10px;
+    text-align: center;
+}
+.TopLeft
+{
+    border: 1px dashed #000080;
+    background-image: url('../image/tblbg.png');
+    background-repeat: repeat;
+    background-position: left top;
+    background-color: #FFFFFF;
+    width: 250px;
+    color: #000000;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.contex
+{
+    background-color: #FFFFFF;
+    font-family: tahoma;
+    font-size: 12px;
+    line-height: 18px;
+    text-align: center;
+    border: 1px solid #000080;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    background-image: url('../image/bg.gif');
+}
+ .footer
+        {
+    background-color: #FFFFFF;
+    border: 1px solid #000080;
+    text-align: center;
+    font-family: tahoma;
+    font-size: 10px;
+    color: #000000;
+    font-style: normal;
+    height: 35px;
+    padding-top: 15px;
+    width: 600px;
+}
+  .wrap
+        {
+    padding: 0px;
+    text-align: center;
+    width: 600px;
+  
+}
+.wrap2
+{
+    padding: 5px 0px 0px 0px;
+    text-align: center;
+}
+.topLeft
+{
+    border: 1px solid #030133;
+    background-image: url('../image/TL.jpg');
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-color: #030133;
+    color: #FFFFFF;
+    width: 600px;
+    text-align: center;
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+.dowRight
+{
+    background-image: url('../image/RD.jpg');
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.tbl
+{
+    height: 131px;
+    width: 325px;
+    border: 1px solid #000080;
+    text-decoration: none;
+}
+.tdTbl
+{
+    border-style: none solid none solid;
+    border-width: 2px;
+    border-color: #4985C1;
+    background-position: center;
+    background-image: url('../image/btnImg.JPG');
+    background-repeat: repeat-x;
+    height: 39px;
+}
+a
+{
+    text-decoration: none;
+    color: #000080;
+    font-family: tahoma;
+    font-size: 11px;
+    font-weight: bold;
+}
+a:hover
+{
+    color:#800000;
+    text-decoration: none;
+}
+.headerDef
+{
+    padding: 10px 0px 0px 0px;
+    margin: 0px;
+    font-family: tahoma;
+    font-size: 13px;
+    line-height: 25px;
+    font-style: normal;
+    background-color: #FFFFFF;
+    border: 1px solid #000080;
+    height: 80px;
+    width: 600px;
+    text-align: center;
+    font-weight: bold;
+}
