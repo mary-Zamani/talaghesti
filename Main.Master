@@ -27,7 +27,127 @@
 
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
+     <script type="text/javascript" src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js' ></script>
+      <script type="text/javascript" language="javascript">
 
+      function closepanel() {
+          $("#exampleModalCenter").modal("hide");
+      }
+      function closepanel2() {
+          $("#exampleModalCenter2").modal("hide");
+      }
+      function removefrombasket(etiket) {
+
+          __doPostBack("btn_rem", etiket);
+      }
+      function addtobasket(etikets) {
+          document.getElementById("hd_etc").value = etikets;
+          var tc = document.getElementById("hd_tok").value;
+        
+ 
+              __doPostBack("btn_add", etikets + ":" + document.getElementById("hid_pishp").value + ":"+document.getElementById("hid_ghest").value);
+             
+      }
+      function addtobasketafterphone() {
+          document.getElementById("hd_tok").value = document.getElementById("txt_mblno").value;
+          var etikets = document.getElementById("hd_etc").value;
+          var pishp = "";
+          var ghest = "";
+          if (document.getElementById("hid_pishp") != null) pishp = document.getElementById("hid_pishp").value;
+          if (document.getElementById("hid_ghest") != null) ghest = document.getElementById("hid_ghest").value;
+
+          __doPostBack("btn_add", etikets + ":" + pishp + ":" + ghest);
+      }
+      function DisableButtons() {
+          var inputs = document.getElementsByTagName("INPUT");
+          for (var i in inputs) {
+              if (inputs[i].type == "button" || inputs[i].type == "submit") {
+                  inputs[i].disabled = true;
+              }
+          }
+      }
+      function bodyonload() {
+        
+     
+
+          $('input.3dnumber').val(function (index, value) {
+
+              var result = value.replace(/[۰]/g, '0');
+              result = result.replace(/[۱]/g, '1');
+              result = result.replace(/[۲]/g, '2');
+              result = result.replace(/[۳]/g, '3');
+              result = result.replace(/[۴]/g, '4');
+              result = result.replace(/[٤]/g, '4');
+              result = result.replace(/[۵]/g, '5');
+              result = result.replace(/[٥]/g, '5');
+              result = result.replace(/[۶]/g, '6');
+              result = result.replace(/[٦]/g, '6');
+              result = result.replace(/[۷]/g, '7');
+              result = result.replace(/[۸]/g, '8');
+              result = result.replace(/[۹]/g, '9');
+              return result
+                  .replace(/\D/g, "")
+                  .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+          });
+
+
+          $('input.3dnumber').on('keyup', function (event) {
+
+              
+              $(this).attr('type', 'text');
+           
+              if (event.which >= 37 && event.which <= 40) return;
+
+              // format number
+              $(this).val(function (index, value) {
+
+                  var result = value.replace(/[۰]/g, '0');
+                  result = result.replace(/[۱]/g, '1');
+                  result = result.replace(/[۲]/g, '2');
+                  result = result.replace(/[۳]/g, '3');
+                  result = result.replace(/[۴]/g, '4');
+                  result = result.replace(/[٤]/g, '4');
+                  result = result.replace(/[۵]/g, '5');
+                  result = result.replace(/[٥]/g, '5');
+                  result = result.replace(/[۶]/g, '6');
+                  result = result.replace(/[٦]/g, '6');
+                  result = result.replace(/[۷]/g, '7');
+                  result = result.replace(/[۸]/g, '8');
+                  result = result.replace(/[۹]/g, '9');
+
+                  return result
+                      .replace(/\D/g, "")
+                      .replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+                      ;
+              });
+          });
+
+              $('input.number').on('keyup', function (event) {
+                  
+                  $(this).val(function (index, value) {
+                      var result = value.replace(/[۰]/g, '0');
+                      result = result.replace(/[۱]/g, '1');
+                      result = result.replace(/[۲]/g, '2');
+                      result = result.replace(/[۳]/g, '3');
+                      result = result.replace(/[۴]/g, '4');
+                      result = result.replace(/[٤]/g, '4');
+                      result = result.replace(/[۵]/g, '5');
+                      result = result.replace(/[٥]/g, '5');
+                      result = result.replace(/[۶]/g, '6');
+                      result = result.replace(/[٦]/g, '6');
+                      result = result.replace(/[۷]/g, '7');
+                      result = result.replace(/[۸]/g, '8');
+                      result = result.replace(/[۹]/g, '9');
+                      return result;
+                  });
+
+          });
+
+      
+
+          window.onbeforeunload = DisableButtons;
+      }
+      </script>
 
 </head>
 
@@ -332,7 +452,9 @@
                                 <div class="menu-cart">
                                     <div class="cart-box">
                                     </div>
-                                    <a href="#" class="cart-icon">
+                                    
+                                      
+                                    <a id="lbl_shopcart" runat="server" class="cart-icon">
                                         <i class="fa-regular fa-bag-shopping"></i>
                                     </a>
                                 </div>
@@ -1704,7 +1826,9 @@
         <script src="/assets/js/splitting.js"></script>
         <script src="/assets/js/nice-select.min.js"></script>
         <script src="/assets/js/main.js"></script>
-
+        <asp:HiddenField runat="server" ID="hd_tok"  ClientIDMode="Static"/>
+     <asp:HiddenField runat="server" ID="hd_etc"  ClientIDMode="Static"/>
+      <asp:HiddenField runat="server" ID="hd_showpop" ClientIDMode="Static" />
     </form>
 </body>
 </html>

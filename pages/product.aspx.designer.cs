@@ -24,15 +24,6 @@ namespace narsShop.pages
         protected global::System.Web.UI.WebControls.Image productimage;
 
         /// <summary>
-        /// firstetiket control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label firstetiket;
-
-        /// <summary>
         /// Lbl_title control.
         /// </summary>
         /// <remarks>
@@ -40,6 +31,15 @@ namespace narsShop.pages
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Lbl_title;
+
+        /// <summary>
+        /// firstetiket control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label firstetiket;
 
         /// <summary>
         /// Drp_size control.

@@ -8,7 +8,7 @@
 
     <meta charset="utf-8" content="text/Html" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<asp:contentplaceholder runat="server" id="cphPageMetaData"/> 
+   <asp:contentplaceholder runat="server" id="cphPageMetaData"/> 
 
  <%--   <link rel="stylesheet" href="<%=HttpContext.Current.Request.Url.GetLeftPart(UriPartial.Authority)+"/css/bootstrap.min.css"%>" type="text/css"/>--%>
   

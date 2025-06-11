@@ -23,16 +23,20 @@
                 <div class="row gx-60">
                     <div class="col-lg-6">
                         <div class="product-big-img bg-color2"> 
+                            
+                           
                                <asp:Image runat="server" ID="productimage" />
-                              <asp:label runat="server" ID="firstetiket" />
+                             
                         </div>
                     </div>
                     <div class="col-lg-6">
                         <div class="product-about">
- 
-                                      <div class="col-lg-6 col-sm-12" style="overflow:scroll">
+                            <h2><asp:Label runat="server" ID="Lbl_title" /></h2>
+                              <asp:label runat="server" ID="firstetiket" />
+   <div class="product-details">
+              <div   style="overflow:scroll">
               <div class="filter-control" style="text-align:center">
-<h2><asp:Label runat="server" ID="Lbl_title" /></h2>
+
                   <table width="100%">
                       <tr>
                           <td>انتخاب سایز</td>
@@ -43,11 +47,13 @@
                           <td><asp:DropDownList runat="server" ID="Drp_size"   CssClass="form-control dropdown dropdown-backdrop" AutoPostBack="true" OnSelectedIndexChanged="drp_size_SelectedIndexChanged"/></td>
                           <td><asp:DropDownList runat="server" ID="Drp_color"  CssClass="form-control dropdown dropdown-backdrop" AutoPostBack="true" OnSelectedIndexChanged="drp_size_SelectedIndexChanged"/></td>
                           <td><asp:DropDownList runat="server" ID="Drp_count"  CssClass="form-control dropdown dropdown-backdrop" AutoPostBack="true" OnSelectedIndexChanged="drp_size_SelectedIndexChanged"/></td>
-                      </tr></table>
+                      </tr>
+
+                  </table>
               </div>
 <asp:Label runat="server" ID="lbl_product" />
     </div>
-                            <div class="product-details">
+                          
                                 
                             </div>
                             <div class="actions">
@@ -71,7 +77,7 @@
                             <div class="desc">
                                 <p> توضحیات
                                 </p> <br>
-                                <p>توضیحات</p>
+                                
                             </div>
                         </div>
                      

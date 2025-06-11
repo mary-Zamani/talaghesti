@@ -51,6 +51,15 @@ namespace narsShop
         protected global::System.Web.UI.HtmlControls.HtmlButton btnSubmit;
 
         /// <summary>
+        /// lbl_shopcart control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor lbl_shopcart;
+
+        /// <summary>
         /// SectionBaner control.
         /// </summary>
         /// <remarks>
@@ -121,5 +130,32 @@ namespace narsShop
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Literal litPagination;
+
+        /// <summary>
+        /// hd_tok control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField hd_tok;
+
+        /// <summary>
+        /// hd_etc control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField hd_etc;
+
+        /// <summary>
+        /// hd_showpop control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField hd_showpop;
     }
 }
