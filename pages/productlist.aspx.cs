@@ -52,8 +52,7 @@ namespace narsShop.pages
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            ((Main)this.Master).ShowBaner = false;
-            ((Main)this.Master).ShowCategory = false;
+          
           
           
             parent = Request["parent"]?.ToString() ?? "10";

@@ -15,17 +15,8 @@ namespace narsShop
     public partial class Main : System.Web.UI.MasterPage
     {
         protected string s1, s2, s3, s4;
-        public bool ShowBaner
-        {
-            get { return SectionBaner.Visible; }
-            set { SectionBaner.Visible = value; }
-        }
-        public bool ShowCategory
-        {
-            get { return SectionCategory.Visible; }
-            set { SectionCategory.Visible = value; }
-
-        }
+      
+    
         public bool ShowBbreadcumb
         {
             get { return sectionBbreadcumb.Visible; }

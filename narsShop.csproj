@@ -619,6 +619,7 @@
     <Content Include="Content\bootstrap.rtl.css" />
     <Content Include="Content\bootstrap.rtl.min.css" />
     <Content Include="index.aspx" />
+    <Content Include="pages\customeraccount.aspx" />
     <Content Include="pages\customercharge_old.aspx" />
     <Content Include="pages\product.aspx" />
     <Content Include="pages\productlist.aspx" />
@@ -2781,7 +2782,7 @@
     <Content Include="pghestinfo.aspx" />
     <Content Include="JpegImage.aspx" />
     <Content Include="neshat.aspx" />
-    <Content Include="pages\customeraccount.aspx" />
+    <Content Include="pages\customeraccount_old.aspx" />
     <Content Include="css\animate.min.css" />
     <Content Include="css\bootstrap-colorpicker.css" />
     <Content Include="css\bootstrap-datepicker.css" />
@@ -3158,6 +3159,13 @@
     <Compile Include="Main.Master.designer.cs">
       <DependentUpon>Main.Master</DependentUpon>
     </Compile>
+    <Compile Include="pages\customeraccount.aspx.cs">
+      <DependentUpon>customeraccount.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\customeraccount.aspx.designer.cs">
+      <DependentUpon>customeraccount.aspx</DependentUpon>
+    </Compile>
     <Compile Include="pages\customercharge_old.aspx.cs">
       <DependentUpon>customercharge_old.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -3345,12 +3353,12 @@
       <DependentUpon>anj.Master</DependentUpon>
     </Compile>
     <Compile Include="component\productitem.cs" />
-    <Compile Include="pages\customeraccount.aspx.cs">
-      <DependentUpon>customeraccount.aspx</DependentUpon>
+    <Compile Include="pages\customeraccount_old.aspx.cs">
+      <DependentUpon>customeraccount_old.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="pages\customeraccount.aspx.designer.cs">
-      <DependentUpon>customeraccount.aspx</DependentUpon>
+    <Compile Include="pages\customeraccount_old.aspx.designer.cs">
+      <DependentUpon>customeraccount_old.aspx</DependentUpon>
     </Compile>
     <Compile Include="indexOld.aspx.cs">
       <DependentUpon>indexOld.aspx</DependentUpon>

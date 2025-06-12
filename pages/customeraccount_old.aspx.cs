@@ -1,46 +1,51 @@
-﻿using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
+﻿using System;
+using System.Collections;
+using System.Data;
 using System.Linq;
 using System.Net.Http.Headers;
 using System.Net.Http;
 using System.Web;
+using System.Web.Security;
 using System.Web.UI;
+using System.Web.UI.HtmlControls;
 using System.Web.UI.WebControls;
+using System.Web.UI.WebControls.WebParts;
+using System.Xml.Linq;
 using TalaModelLibrary;
+using Newtonsoft.Json;
+using System.Collections.Generic;
 
-namespace narsShop.pages
+namespace narsShop
 {
-	public partial class customeraccount : System.Web.UI.Page
-	{
+    public partial class customeraccount_old : System.Web.UI.Page
+    {
         SQLH sqhand;
         token tn;
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            ((Main)this.Master).showsectionShop = false;
-            //tn = (token)Session["token"];
+            tn = (token)Session["token"];
 
-            //if (tn.Token == null)
-            //    Response.Redirect("~");
+            if (tn.Token == null)
+                Response.Redirect("~");
 
-            //lbl_customername.Text = tn.Name;
-            //lbl_customerphone.Text = tn.mobileno;
-            //lbl_customercode.Text = tn.vas;
-            //Dictionary<string, string> customerdic = decode.customerinfo(tn.Token, Session["apiurl"].ToString());
-            //if (customerdic.Count > 0)
-            //{
-            //    lbl_kif.Text = myconvert.todecimal(customerdic["walet"]).ToString("0,0");
-            //    lbl_totalbed.Text = myconvert.todecimal(customerdic["mande"]).ToString("0,0");
-            //    lbl_points.Text = customerdic["point"];
-            //    lbl_customeraddress.Text = customerdic["address"];
-            //    lbl_shmeli.Text = customerdic["shmeli"];
-            //}
-            //foreach (string factorno in dplist())
-            //{
+            lbl_customername.Text = tn.Name;
+            lbl_customerphone.Text = tn.mobileno;
+            lbl_customercode.Text = tn.vas;
+            Dictionary<string, string> customerdic = decode.customerinfo(tn.Token, Session["apiurl"].ToString());
+            if (customerdic.Count > 0)
+            {
+                lbl_kif.Text = myconvert.todecimal(customerdic["walet"]).ToString("0,0");
+                lbl_totalbed.Text = myconvert.todecimal(customerdic["mande"]).ToString("0,0");
+                lbl_points.Text = customerdic["point"];
+                lbl_customeraddress.Text = customerdic["address"];
+                lbl_shmeli.Text = customerdic["shmeli"];
+            }
+            foreach (string factorno in dplist())
+            {
 
-            //    lbl_customerdps.Text += dptable(factorno, tn.vas);
-            //}
+                lbl_customerdps.Text += dptable(factorno, tn.vas);
+            }
         }
 
         string dptable(string thisfactor, string vascode, bool Cb_showalldp = false)
@@ -48,9 +53,9 @@ namespace narsShop.pages
             factorinfo factorinfo1 = dpdetail(thisfactor);
             string respond = "";
 
-            if (factorinfo1.koldaftar.Count == 0 && persiandate.datediff("1400/11/20", factorinfo1.solddate) > 0) return respond;
-            if (factorinfo1.tasvierooz == 0 && factorinfo1.khoshhesabirooz == 0) return respond;
-            if (factorinfo1.Rdetails != null) return respond;
+           if (factorinfo1.koldaftar.Count == 0 && persiandate.datediff("1400/11/20", factorinfo1.solddate) > 0) return respond;
+           if (factorinfo1.tasvierooz == 0 && factorinfo1.khoshhesabirooz == 0) return respond;
+           if (factorinfo1.Rdetails != null) return respond;
 
             if (factorinfo1.factortype == 2) return respond; // نوع نقدی
 
@@ -105,7 +110,7 @@ namespace narsShop.pages
                 respond += "</tr>";
                 comulative += myconvert.toint(dr["ghest"]);
             }
-            respond += "<tr><td colspan=2>" + "جمع قسط ها: " + factorinfo1.jameaghsat.ToString("0,0") + "</td></tr>";
+            respond += "<tr><td colspan=2>"+"جمع قسط ها: " + factorinfo1.jameaghsat.ToString("0,0")+"</td></tr>";
 
             respond += "</table>";
             respond += "</div>";
@@ -162,7 +167,7 @@ namespace narsShop.pages
 
                 }
                 //respond += "<input type=\"button\" data-toggle=\"tooltip\" data-placement=\"top\" title=\"" + sharh + "\" value=\"توضیحات\" class=\"btn btn-secondary\"/>";
-                respond += "<span style=\"font-size:10px\">" + sharh + "</span>";
+                respond +="<span style=\"font-size:10px\">"+ sharh +"</span>";
                 respond += "</td></tr>";
             }
 
@@ -194,10 +199,10 @@ namespace narsShop.pages
                     respond += "مبلغ تسویه در روز:";
 
                     if (factorinfo1.tasvierooz >= 0)
-                        respond += factorinfo1.tasvierooz.ToString("0,0") + "<br>";
+                        respond += factorinfo1.tasvierooz.ToString("0,0")+ "<br>";
                     else
                         respond += "<span class=\"label label-danger\">" + factorinfo1.tasvierooz.ToString("0,0") + "</span><br>";
-                    respond += "تاریخ محاسبه:" + persiandate.datef();
+                    respond += "تاریخ محاسبه:"+persiandate.datef();
                 }
 
 
@@ -206,8 +211,23 @@ namespace narsShop.pages
             respond += "<div class=\"col-lg-6 col-sm-4 mb-1 \" style=\"text-align:right\">";
             respond += $"<a href=\"customercharge.aspx?type=D&factor=" + thisfactor + "\" class=\"btn btn-info btn-block\"><i class=\"fa fa-pencil\"></i> پرداخت قسط</a> ";
             respond += "</div></div>";
-  
-            respond += $" </div>\r\n          </div>\r\n        </div>\r\n      </div>\r\n<br>";
+/*
+            respond += "<table class=\"table table-advance table-bordered\">" +
+                "<tr><td style=\"width:50%\">" + "" + "</td><td style=\"width:50%\">" + "" + "</td></tr>";
+            respond += "<theaad><tr><td></td><td></td></tr></thead>";
+            respond += "<tr><td>";
+            respond += "</td><td>";
+
+                        
+
+            respond += "</td><td>";
+            respond += "</td></tr></tfoot>";
+
+
+            respond += "</table>";
+
+*/
+            respond+=    $" </div>\r\n          </div>\r\n        </div>\r\n      </div>\r\n<br>";
 
 
 
@@ -220,7 +240,7 @@ namespace narsShop.pages
         {
 
             string[] json = null;
-            string apiUrl = Session["apiurl"] + "/api/customer/dplist/";
+            string apiUrl = Session["apiurl"]+"/api/customer/dplist/";
             HttpClient client = new HttpClient();
             client.BaseAddress = new Uri(apiUrl);
             client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
@@ -244,7 +264,7 @@ namespace narsShop.pages
         {
             factorinfo respond = new factorinfo();
 
-            string apiUrl = Session["apiurl"] + "/api/customer/factorinfo/" + tn.Token + "/";
+            string apiUrl = Session["apiurl"]+"/api/customer/factorinfo/" + tn.Token + "/";
             HttpClient client = new HttpClient();
             client.BaseAddress = new Uri(apiUrl);
             client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
@@ -262,34 +282,8 @@ namespace narsShop.pages
             return respond;
 
         }
-        protected void btnExist_Click(object sender, EventArgs e)
-        {
-            
-            //Session.Abandon();
-            TalaModelLibrary.token tn = new token();
-
-            Session["token"] = tn;
-
-            Response.Cookies.Clear();
-            HttpCookie TNcookie = new HttpCookie("Token");
-            TNcookie.Value = JsonConvert.SerializeObject(tn);
-            TNcookie.Expires = DateTime.Now;
-            Response.Cookies.Add(TNcookie);
 
 
-
-            Response.Redirect(Request.Url.AbsoluteUri.Substring(0, Request.Url.AbsoluteUri.IndexOf('/', 10)));
-        }
-        protected void linkdargah_Click(object sender, EventArgs e)
-        {
-            string redirecturl = "";
-            if (myconvert.todecimal(txt_mablagh.Text) < 10000) return;
-
-            //if (paytype == "D")
-            //    redirecturl = (banksite + "/pages/customercharge_dargah2.aspx?tokenid=" + tn.Token + "&type=" + paytype + (myconvert.todecimal(txt_mablagh.Text) > 0 ? "&value=" + txt_mablagh.Text.Replace(",", "") : "") + (paytype.Equals("D") ? "&factor=" + Request["factor"].ToString().Trim() : "") + "&dargah=" + rb_dargah.SelectedValue);
-            //if (paytype == "W")
-            //    redirecturl = (banksite + "/pages/customercharge_dargah2.aspx?tokenid=" + tn.Token + "&type=" + paytype + (myconvert.todecimal(txt_mablagh.Text) > 0 ? "&value=" + txt_mablagh.Text.Replace(",", "") : "") + (paytype.Equals("D") ? "&factor=" + Request["factor"].ToString().Trim() : "") + "&dargah=" + rb_dargah.SelectedValue);
-            //Response.Redirect(redirecturl);
-        }
+    
     }
 }

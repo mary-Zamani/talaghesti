@@ -22,8 +22,7 @@ namespace narsShop
         protected static string callerurl = "~/pages/customeraccount.aspx";
         protected void Page_Load(object sender, EventArgs e)
         {
-            ((Main)this.Master).ShowBaner = false;
-            ((Main)this.Master).ShowCategory = false;
+            ;
             ((Main)this.Master).showsectionShop = false;
            
             string tok = Request["tok"];

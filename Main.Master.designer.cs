@@ -60,24 +60,6 @@ namespace narsShop
         protected global::System.Web.UI.HtmlControls.HtmlAnchor lbl_shopcart;
 
         /// <summary>
-        /// SectionBaner control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl SectionBaner;
-
-        /// <summary>
-        /// SectionCategory control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl SectionCategory;
-
-        /// <summary>
         /// sectionBbreadcumb control.
         /// </summary>
         /// <remarks>
