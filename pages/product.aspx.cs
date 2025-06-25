@@ -226,7 +226,9 @@ namespace narsShop.pages
                 respond += "<input onchange=\"rs_change(this.value," + kcode + ");\" id=\"RS_" + kcode + "\" type=\"range\"   min=\"" + (Math.Ceiling(totalprice / (pishpp * 10000)) * 10000) + "\" max=\"" + (Math.Ceiling(totalprice / 10000) * 10000) + "\" step=\"10000\"  value=\"" + (Math.Ceiling(totalprice / (pishpp * 10000)) * 10000) + "\" " + (faghatnaghdi ? "readonly=true" : "") + " />";
                 respond += "</td></tr><tr><td> اقسط 5 ماهه";
                 respond += "</td><td>" + "<lable id=\"ghest_" + kcode + "\" >" + (Math.Ceiling(((totalprice - (totalprice / pishpp)) * (decimal)1.25 / 5) / 10000) * 10000).ToString("0,0") + "</lable></td></tr>";
-                respond += "<tr><td colspan=3><input type=\"button\"  onclick=\"addtobasket('" + etiket_list + "')\" class=\"theme-btn fa-regular fa-cart-shopping bg-transparent text-white\" title=\"اضافه به سبد خرید\" value=\"اضافه به سبد خرید\"/></td></tr>";
+                respond += "<tr><td colspan=3><a class='theme-btn' href='javascript:void(0)' onclick=\"addtobasket('" + etiket_list + "')\">افزودن سبد خرید<i class='fa-regular fa-cart-shopping bg-transparent text-white'></i></a></td></tr>";
+
+                //respond += "<tr><td colspan=3><input type=\"button\"  onclick=\"addtobasket('" + etiket_list + "')\" class=\"theme-btn fa-regular fa-cart-shopping bg-transparent text-white\" title=\"اضافه به سبد خرید\" value=\"اضافه به سبد خرید\"/></td></tr>";
                 respond += "</table>";
 
                 hid_pishp.Value = (Math.Ceiling(totalprice / (pishpp * 10000)) * 10000).ToString();

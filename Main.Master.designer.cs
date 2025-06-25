@@ -51,13 +51,22 @@ namespace narsShop
         protected global::System.Web.UI.HtmlControls.HtmlButton btnSubmit;
 
         /// <summary>
+        /// shopcart control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        //protected global::System.Web.UI.HtmlControls.HtmlAnchor shopcart;
+
+        /// <summary>
         /// lbl_shopcart control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor lbl_shopcart;
+        protected global::System.Web.UI.WebControls.Label lbl_shopcart;
 
         /// <summary>
         /// sectionBbreadcumb control.

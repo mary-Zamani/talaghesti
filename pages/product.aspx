@@ -20,8 +20,10 @@
     <div class="shop-details-section section-padding fix">
         <div class="shop-details bg-white">
             <div class="container">
+               <h2><asp:Label runat="server" ID="Lbl_title" /> (<asp:label runat="server" ID="firstetiket" /> )</h2>
                 <div class="row gx-60">
                     <div class="col-lg-6">
+                         
                         <div class="product-big-img bg-color2"> 
                             
                            
@@ -31,8 +33,7 @@
                     </div>
                     <div class="col-lg-6">
                         <div class="product-about">
-                            <h2><asp:Label runat="server" ID="Lbl_title" /></h2>
-                              <asp:label runat="server" ID="firstetiket" />
+                           
    <div class="product-details">
               <div   style="overflow:scroll">
               <div class="filter-control" style="text-align:center">
@@ -61,11 +62,11 @@
                             </div> 
                             
 
-                            <div class="product-details-footer">
+                           <%-- <div class="product-details-footer">
                                 <a class='theme-btn' href='/cart.html'>افزودن سبد خرید<i
                                         class="fa-regular fa-cart-shopping bg-transparent text-white"></i></a>
                                 
-                            </div>
+                            </div>--%>
 
                         </div>
                     </div>

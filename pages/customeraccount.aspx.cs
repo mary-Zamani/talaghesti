@@ -19,28 +19,31 @@ namespace narsShop.pages
         protected void Page_Load(object sender, EventArgs e)
         {
             ((Main)this.Master).showsectionShop = false;
-            //tn = (token)Session["token"];
+           tn = (token)Session["token"];
 
-            //if (tn.Token == null)
-            //    Response.Redirect("~");
+            if (tn.Token == null)
+                Response.Redirect("~");
 
-            //lbl_customername.Text = tn.Name;
-            //lbl_customerphone.Text = tn.mobileno;
-            //lbl_customercode.Text = tn.vas;
-            //Dictionary<string, string> customerdic = decode.customerinfo(tn.Token, Session["apiurl"].ToString());
-            //if (customerdic.Count > 0)
-            //{
-            //    lbl_kif.Text = myconvert.todecimal(customerdic["walet"]).ToString("0,0");
-            //    lbl_totalbed.Text = myconvert.todecimal(customerdic["mande"]).ToString("0,0");
-            //    lbl_points.Text = customerdic["point"];
-            //    lbl_customeraddress.Text = customerdic["address"];
-            //    lbl_shmeli.Text = customerdic["shmeli"];
-            //}
-            //foreach (string factorno in dplist())
-            //{
+            lbl_customername.Text = tn.Name;
+            lblName.Text = tn.Name;
+            lbl_customerphone.Text = tn.mobileno;
+            lblMobile.Text= tn.mobileno;
+            lbl_customercode.Text = tn.vas;
+            Dictionary<string, string> customerdic = decode.customerinfo(tn.Token, Session["apiurl"].ToString());
+            if (customerdic.Count > 0)
+            {
+                lbl_kif.Text = myconvert.todecimal(customerdic["walet"]).ToString("0,0");
+                lbl_totalbed.Text = myconvert.todecimal(customerdic["mande"]).ToString("0,0");
+                lbl_points.Text = customerdic["point"];
+                lbl_customeraddress.Text = customerdic["address"];
+                lblAddress.Text= customerdic["address"];    
+                lbl_shmeli.Text = customerdic["shmeli"];
+            }
+            foreach (string factorno in dplist())
+            {
 
-            //    lbl_customerdps.Text += dptable(factorno, tn.vas);
-            //}
+                lbl_customerdps.Text += dptable(factorno, tn.vas);
+            }
         }
 
         string dptable(string thisfactor, string vascode, bool Cb_showalldp = false)

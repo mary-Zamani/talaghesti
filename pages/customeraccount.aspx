@@ -30,7 +30,7 @@
                                     data-bs-target="#v-pills-order-details" type="button" role="tab"
                                     aria-controls="v-pills-order-details" aria-selected="false">
                                     <i
-                                        class="fa-solid fa-list"></i>جزئیات سفارش</button>
+                                        class="fa-solid fa-list"></i>جزئیات سفارش </button>
 
                                 <button class="nav-link" id="v-pills-wishlist-tab"   aria-selected="false">
                                     <i
@@ -81,32 +81,28 @@
                                                     <tr>
                                                         <td><i class="fa fa-pencil fa-fw "></i>کد مشتری</td>
                                                         <td>
-                                                            <asp:Label runat="server" ID="Label1" /></td>
+                                                            <asp:Label runat="server" ID="lbl_customercode" /></td>
                                                     </tr>
-
+                                                    <tr>
+                                                        <td><i class="fa fa-home fa-fw "></i>آدرس</td>
+                                                        <td>
+                                                          <asp:Label runat="server" ID="lbl_customeraddress" /></td>
+                                                    </tr>
+                                             
+                                                   <tr>
+                                                        <td>  <i class="fa fa-phone fa-fw "></i>تلفن</td>
+                                                        <td>
+                                                          <asp:Label runat="server" ID="lbl_customerphone" /></td>
+                                                    </tr>
                                                     <tr>
                                                         <td><i class="fa fa-user fa-fw "></i>شماره ملی</td>
                                                         <td>
-                                                            <asp:Label runat="server" ID="Label4" /></td>
+                                                            <asp:Label runat="server" ID="lbl_shmeli" /></td>
                                                     </tr>
                                                     <tr>
                                                         <td colspan="2"></td>
                                                     </tr>
-                                                    <tr>
-                                                        <td><i class="fa fa-dollar fa-fw "></i>کیف پول</td>
-                                                        <td>
-                                                            <asp:Label ID="Label5" runat="server" /></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td><i class="fa fa-star fa-fw "></i>امتیاز</td>
-                                                        <td>
-                                                            <asp:Label ID="Label6" runat="server" /></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td><i class="fa fa-expand fa-fw "></i>کل بدهی</td>
-                                                        <td>
-                                                            <asp:Label ID="Label7" runat="server" /></td>
-                                                    </tr>
+                                                    
                                                     <tr>
                                                         <td colspan="2"></td>
                                                     </tr>
@@ -117,13 +113,25 @@
                                         </div>
                                         <div class="col-xl-5">
                                             <div class="dashboard-profile-info">
-                                                <h6>آدرس صورتحساب</h6>
-                                                <h5>
-                                                    <asp:Label runat="server" ID="lbl_customername2" /></h5>
-                                                <a href="#" class="address"><i class="fa fa-home fa-fw "></i>آدرس</a>
-                                                <a href="mailto:abcd@gmail.com"
-                                                    class="email">test@gmail.com</a>
-                                                <a href="tel:234343423" class="phone"><i class="fa fa-phone fa-fw "></i>تلفن</a>
+                                                
+                                                 <table>
+                                                     <tr>
+                                                        <td><i class="fa fa-dollar fa-fw "></i>کیف پول</td>
+                                                        <td>
+                                                            <asp:Label ID="lbl_kif" runat="server" /></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><i class="fa fa-star fa-fw "></i>امتیاز</td>
+                                                        <td>
+                                                            <asp:Label ID="lbl_points" runat="server" /></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><i class="fa fa-expand fa-fw "></i>کل بدهی</td>
+                                                        <td>
+                                                            <asp:Label ID="lbl_totalbed" runat="server" /></td>
+                                                    </tr>
+                                                 </table>
+                                                
                                                 <%--<button class="edit">ویرایش ادرس</button>--%>
                                             </div>
                                         </div>
@@ -312,25 +320,19 @@
                                         <div class="box">
                                             <h4>آدرس صورتحساب</h4>
                                             <div class="content">
-                                                <h5>نام مشتری</h5>
-                                                <p>تهران-جردن-ساختمان الماس</p>
-                                                <p>
-                                                    ایمیل: <a
-                                                        href="mailto:test@gmail.com">test@gmail.com</a>
-                                                </p>
-                                                <p>موبایل: <a href="tel:435346543r">(+98) 935–0110</a></p>
+                                                <h5><asp:Label runat="server" ID="lblName" /></h5>
+                                                <p> <asp:Label runat="server" ID="lblAddress" /></p>
+                                                
+                                                <p>موبایل: <asp:Label runat="server" ID="lblMobile" /></p>
                                             </div>
                                         </div>
                                         <div class="box">
                                             <h4>آدرس حمل و نقل</h4>
                                             <div class="content">
-                                                <h5>دانیال رستمی</h5>
-                                                <p>تهران-جردن-ساختمان الماس</p>
-                                                <p>
-                                                    ایمیل: <a
-                                                        href="mailto:dainne.russell@gmail.com">dainne.russell@gmail.com</a>
-                                                </p>
-                                                <p>موبایل: <a href="tel:435346543r">(+98) 935–0110</a></p>
+                                                <h5>طلافروشی نشاط</h5>
+                                                <p>شهر ری-ابتدای فداییان اسلام-پلاک 28</p>
+                                               
+                                                <p>تلفن: <a href="tel: 021-55901823 "> 021-55901823 </a></p>
                                             </div>
                                         </div>
                                     </div>

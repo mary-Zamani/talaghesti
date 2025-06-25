@@ -1,77 +1,168 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="customershop.aspx.cs" Inherits="narsShop.customershop"  MasterPageFile="~/mst.Master"%>
-<%@ Register assembly="AjaxControlToolkit" namespace="AjaxControlToolkit" tagprefix="asp" %>
-<%@ MasterType VirtualPath="~/mst.Master" %> 
-
-
-    <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-
-
-        <br />
-<div class="navbar navbar-nav">
-<p class="btn-warning"></p>
-    </div>
-
-<!-- Page Container -->
-<!-- The Grid -->
- <div class="row mb-f justify-content-between">
- 
-    <!-- Left Column -->
-    <div class="col-lg-8 mb-6 mb-md-5" style="text-align:right">
-
-
-    
-
-
-
-<section class="h-100 h-custom" style="background-color: #eee;">
-    <div class="row d-flex justify-content-center align-items-center h-100" style="vertical-align:top">
-      <div class="col-lg-8">
-        <div class="card">
-          <div class="card-body p-0">
-              <asp:Label runat="server" ID="list_kala" />
-
-                
-
-              <!--
-                <div class="card mb-3 mb-lg-0">
-                  <div class="card-body">
-                    <div class="d-flex justify-content-between">
-                      <div class="d-flex flex-row align-items-center">
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Main.Master" AutoEventWireup="true" CodeBehind="customershop.aspx.cs" Inherits="narsShop.pages.customershop" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <!-- Dashboard Section Start -->
+    <div class="dashboard-section section-padding fix">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-3">
+                    <div class="dashboard-navigation-sidebar">
+                        <h3>
+                            <asp:Label runat="server" ID="lbl_customername" /></h3>
                         <div>
-                          <img
-                            src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-shopping-carts/img4.webp"
-                            class="img-fluid rounded-3" alt="Shopping item" style="width: 65px;">
+                            <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist"
+                                aria-orientation="vertical">
+                             
+                                    <table border="0">
+                                                    <tr>
+                                                        <td><i class="fa fa-pencil fa-fw "></i>کد مشتری</td>
+                                                        <td>
+                                                            <asp:Label runat="server" ID="Label1" /></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><i class="fa fa-home fa-fw "></i>آدرس</td>
+                                                        <td>
+                                                          <asp:Label runat="server" ID="Label2" /></td>
+                                                    </tr>
+                                             
+                                                   <tr>
+                                                        <td>  <i class="fa fa-phone fa-fw "></i>تلفن</td>
+                                                        <td>
+                                                          <asp:Label runat="server" ID="Label3" /></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><i class="fa fa-user fa-fw "></i>شماره ملی</td>
+                                                        <td>
+                                                            <asp:Label runat="server" ID="Label4" /></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="2"></td>
+                                                    </tr>
+                                                    
+                                                    <tr>
+                                                        <td colspan="2"></td>
+                                                    </tr>
+                                
+                                                     <tr>
+                                                        <td><i class="fa fa-dollar fa-fw "></i>کیف پول</td>
+                                                        <td>
+                                                            <asp:Label ID="Label5" runat="server" /></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><i class="fa fa-star fa-fw "></i>امتیاز</td>
+                                                        <td>
+                                                            <asp:Label ID="Label6" runat="server" /></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><i class="fa fa-expand fa-fw "></i>کل بدهی</td>
+                                                        <td>
+                                                            <asp:Label ID="Label7" runat="server" /></td>
+                                                    </tr>
+                                                 </table>
+                                <button class="nav-link" id="v-pills-wishlist-tab"   aria-selected="false">
+                                    <i
+                                        class="fa-light fa fa-shopping-cart"></i>اقساط من</button>
+                                <button class="nav-link" id="v-pills-wishlist-tab1" data-bs-toggle="pill"
+                                    data-bs-target="#v-pills-wishlist" type="button" role="tab"
+                                    aria-controls="v-pills-wishlist" aria-selected="false">
+                                    <i
+                                        class="fa-light fa fa-dollar"></i>شارژ کیف پول</button>
+                                <button class="nav-link" id="v-pills-wishlist-tab2"  
+                                    aria-controls="v-pills-wishlist" aria-selected="false">
+                                    <i
+                                        class="fa-light fa fa-comment"></i>پشتیبانی سایت</button>
+                                <asp:LinkButton ID="btnShop" runat="server" CssClass="nav-link" PostBackUrl="/index.aspx">
+    <i class="fa-light fa fa-shopping-cart"></i> فروشگاه 
+</asp:LinkButton>
+
+
+
+                              
+                                <asp:LinkButton ID="btnExists" runat="server" CssClass="nav-link" >
+                                 <i class="fa-solid fa-sign-out-alt"></i> خروج از حساب
+                                </asp:LinkButton>
+
+                            </div>
                         </div>
-                        <div class="ms-3">
-                          <h5>پلاک پروانه</h5>
-                          <p class="small mb-0">زرد</p>
-                        </div>
-                      </div>
-                      <div class="d-flex flex-row align-items-center">
-                        <div style="width: 50px;">
-                          <h5 class="fw-normal mb-0">0.32 گرم</h5>
-                        </div>
-                        <div style="width: 80px;">
-                          <h5 class="mb-0">16,700,000</h5>
-                        </div>
-                        <a href="#!" style="color: #cecece;"><i class="fas fa-trash-alt"></i></a>
-                      </div>
                     </div>
-                  </div>
                 </div>
-              -->
+                <div class="col-xl-9">
 
-          </div>
-        </div>
-      </div>
-    
-
-      <!-- shop summery  and pay -->
-        <div class="col">
-                 <div class="card bg-secondary text-white rounded-3">
-                  <div class="card-body">
-
-                    <div class="d-flex justify-content-between">
+                    <div class="tab-content" id="v-pills-tabContent">
+                        <div class="tab-pane fade show active" id="v-pills-dashboard" role="tabpanel"
+                            aria-labelledby="v-pills-dashboard-tab" tabindex="0">
+                            <div class="dashboard-wrapper">
+                              
+                                <div class="order-history2">
+                                  
+                                    <!-- Cart Section Start -->
+    <div class="cart-wrapper  section-padding fix bg-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                    <div class="table_desc">
+                        <div class="table_page table-responsive">
+                            <table>
+                                <!-- Start Cart Table Head -->
+                                <thead>
+                                    <tr>
+                                        <th class="product_name text-start">محصول</th>
+                                        <th class="product-price">شناسه</th>
+                                        <th class="product_quantity">گرم</th>
+                                        <th class="product_total">قیمت</th>
+                                        <th class="product_remove">حذف</th>
+                                    </tr>
+                                </thead> <!-- End Cart Table Head -->
+                                <tbody>
+                                    <!-- Start Cart Single Item-->
+                                    <tr>
+                                        <td class="product_thumb">
+                                            <a href="#!">
+                                                <img src="/assets/images/cart/cart-thumb1_1.jpg" alt="img"></a>
+                                            <a class="product-name" href="#!">لباس کوتاه</a>
+                                        </td>
+                                        <td class="product-price">150.000&nbsp;تومان</td>
+                                        <td class="product_quantity">
+                                            <div class="plus-minus-input">
+                                              
+                                            </div>
+                                        </td>
+                                        <td class="product_total">30.000&nbsp;تومان</td>
+                                        <td class="product_remove"><a href="#"><svg xmlns="http://www.w3.org/2000/svg"
+                                                    width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                    <g clip-path="url(#clip0_229_10585)">
+                                                        <path
+                                                            d="M12 23C18.0748 23 23 18.0748 23 12C23 5.92525 18.0748 1 12 1C5.92525 1 1 5.92525 1 12C1 18.0748 5.92525 23 12 23Z"
+                                                            stroke="#E5E5E5" stroke-miterlimit="10" />
+                                                        <path d="M16 8L8 16" stroke="#5F5F5F" stroke-width="1.5"
+                                                            stroke-linecap="round" stroke-linejoin="round" />
+                                                        <path d="M16 16L8 8" stroke="#5F5F5F" stroke-width="1.5"
+                                                            stroke-linecap="round" stroke-linejoin="round" />
+                                                    </g>
+                                                    <defs>
+                                                        <clipPath id="clip0_229_105852244">
+                                                            <rect width="24" height="24" fill="white" />
+                                                        </clipPath>
+                                                    </defs>
+                                                </svg></a></td>
+                                    </tr> <!-- End Cart Single Item-->
+                                   
+                                   
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                 
+                </div>
+            </div>
+            <div class="cart-checkout-wrapper">
+                <div class="coupon_code right" data-aos="fade-up" data-aos-delay="400">
+                   
+                    <div class="coupon_inner">
+                  
+                        <div class="cart_subtotal ">
+                              <div class="d-flex justify-content-between">
                       <p class="mb-2">جمع</p>
                       <p class="mb-2"><asp:Label ID="l_price_a" runat="server"></asp:Label></p>
                     </div>
@@ -98,65 +189,26 @@
                       <p class="mb-2">مبلغ هر قسط</p>
                       <p class="mb-2"><asp:Label ID="l_ghest" runat="server"></asp:Label></p>
                     </div>
+                        </div>
 
-                      <asp:Button runat="server" ID="finalizasale" OnClick="finalizasale_Click" Text="نهایی کردن فاکتور" CssClass="btn btn-info btn-block btn-lg" />
-
-                  </div>
+                      
+                        <div class="checkout-btn">
+                            <a href="checkout.html" class="theme-btn style6">نهایی کردن فاکتور</a>
+                        </div>
+                    </div>
                 </div>
             </div>
-  </div>
-</section>
-
-
-
-
-
-
-
-
-</div>
-
-
-     <div class="col mb-6 mb-md-5" style="float:right;text-align:right;max-width:400px">
-      <!-- Profile -->
-      <div class="card bg-primary shadow-inset border-light">
-        <div class="card-body p-5">
-         <h4 class="h4 card-title mb-3"><asp:Label runat="server" ID="lbl_customername" /> </h4>
-       <!--  <p class="centered"><img src="/img/avatar3.png" class="card-img-top rounded-circle" style="height:106px;width:106px" alt="Avatar" /></p> -->
-         <hr />
-            <table border="0" width="100%" >
-                <tr><td><i class="fa fa-pencil fa-fw "></i>کد مشتری</td><td><asp:Label runat="server" ID="lbl_customercode" /></td></tr>
-                <tr><td><i class="fa fa-home fa-fw "></i>آدرس</td><td><asp:Label runat="server" ID="lbl_customeraddress" /></td></tr>
-                <tr><td><i class="fa fa-phone fa-fw "></i>تلفن</td><td><asp:Label runat="server" ID="lbl_customerphone" /></td></tr>
-                <tr><td><i class="fa fa-user fa-fw "></i>شماره ملی</td><td><asp:Label runat="server" ID="lbl_shmeli" /></td></tr>
-                <tr><td colspan="2"><hr /></td></tr>
-                <tr><td><i class="fa fa-dollar fa-fw "></i>کیف پول</td><td><asp:Label ID="lbl_kif" runat="server" /></td></tr>
-                <tr><td><i class="fa fa-star fa-fw "></i>امتیاز</td><td><asp:Label ID="lbl_points" runat="server" /></td></tr>
-                <tr><td><i class="fa fa-expand fa-fw "></i>کل بدهی</td><td><asp:Label ID="lbl_totalbed" runat="server" /></td></tr>
-                <tr><td colspan="2"><hr /></td></tr>
-            </table>
         </div>
-      </div>
-
-      <!-- Accordion -->
-      <div class="card border-light shadow-soft" >
-        <ul class="footer-links list-unstyled mt-2" >
-          <li class="mb-1"> <a class="p-2" href="customeraccount.aspx"><i class="fa fa-shopping-cart fa-fw"></i> اقساط من</a></li>
-          <li class="mb-1"><a class="p-2" href="customercharge.aspx?type=W"><i class="fa fa-dollar fa-fw"></i> شارژ کیف پول </a></li>
-          <li class="mb-1"><a class="p-2" href="customerticket.aspx"><i class="fa fa-comment fa-fw"></i> پشتیبانی سایت </a>         </li>
-          <li class="mb-1"><a class="p-2" href="/index.aspx"><i class="fa fa-shopping-cart fa-fw"></i> صفحه فروشگاه</a>         </li>
-          <li class="mb-1"><a class="p-2" href="/pages/customerexit.aspx"><i class="fa fa-sign-out fa-fw"></i> خروج </a>         </li>
-        </ul>      
-      </div>
-      
-      
- 
-    <!-- End Left Column -->
     </div>
-
-     </div>
-
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+               
+                    
+                </div>
+            </div>
+        </div>
+    </div>
 </asp:Content>
-
-
-

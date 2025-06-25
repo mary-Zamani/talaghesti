@@ -621,6 +621,7 @@
     <Content Include="index.aspx" />
     <Content Include="pages\customeraccount.aspx" />
     <Content Include="pages\customercharge_old.aspx" />
+    <Content Include="pages\customershop.aspx" />
     <Content Include="pages\product.aspx" />
     <Content Include="pages\productlist.aspx" />
     <Content Include="pages\productt.aspx" />
@@ -2769,7 +2770,7 @@
     <Content Include="neumorph\css\vendor\waypoints\lib\waypoints.debug.js" />
     <Content Include="neumorph\css\vendor\waypoints\lib\zepto.waypoints.min.js" />
     <Content Include="neumorph\css\vendor\waypoints\licenses.txt" />
-    <Content Include="pages\customershop.aspx" />
+    <Content Include="pages\customershop_old.aspx" />
     <Content Include="pages\customervpay_next.aspx" />
     <Content Include="admin\list_akhbar.aspx" />
     <Content Include="admin\list_akhbar_add.aspx" />
@@ -3173,6 +3174,13 @@
     <Compile Include="pages\customercharge_old.aspx.designer.cs">
       <DependentUpon>customercharge_old.aspx</DependentUpon>
     </Compile>
+    <Compile Include="pages\customershop.aspx.cs">
+      <DependentUpon>customershop.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\customershop.aspx.designer.cs">
+      <DependentUpon>customershop.aspx</DependentUpon>
+    </Compile>
     <Compile Include="pages\product.aspx.cs">
       <DependentUpon>product.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -3257,12 +3265,12 @@
     <Compile Include="invsummery.aspx.designer.cs">
       <DependentUpon>invsummery.aspx</DependentUpon>
     </Compile>
-    <Compile Include="pages\customershop.aspx.cs">
-      <DependentUpon>customershop.aspx</DependentUpon>
+    <Compile Include="pages\customershop_old.aspx.cs">
+      <DependentUpon>customershop_old.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="pages\customershop.aspx.designer.cs">
-      <DependentUpon>customershop.aspx</DependentUpon>
+    <Compile Include="pages\customershop_old.aspx.designer.cs">
+      <DependentUpon>customershop_old.aspx</DependentUpon>
     </Compile>
     <Compile Include="pages\customervpay_next.aspx.cs">
       <DependentUpon>customervpay_next.aspx</DependentUpon>

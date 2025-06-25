@@ -454,9 +454,16 @@
                                     </div>
                                     
                                       
-                                    <a id="lbl_shopcart" href="/pages/customershop.aspx" runat="server" class="cart-icon">
+                                 <%--   <a id="lbl_shopcart" href="/pages/customershop.aspx" runat="server" class="cart-icon">
                                         <i class="fa-regular fa-bag-shopping"></i>
-                                    </a>
+                                    </a>--%>
+                                    <a id="shopcart" href="/pages/customershop.aspx" runat="server" class="cart-icon">
+    <i class="fa-regular fa-bag-shopping"></i>
+    <%--<span id="cart-count" class="cart-count">2</span>--%>
+                                         <asp:Label runat="server" ID="lbl_shopcart" />
+</a>
+
+                                     
                                 </div>
 
                                 <div class="header__hamburger d-block d-xl-none my-auto">

@@ -62,7 +62,7 @@ namespace narsShop
                 btn_add_Click(null, EventArgs.Empty, parameter);
             }
 
-            //lbl_shopcart.Text = shopcart();
+            lbl_shopcart.Text = shopcart();
             hd_tok.Value = tn.mobileno;
         }
         string loadpart(string newstype)
@@ -83,8 +83,8 @@ namespace narsShop
             SQLH sqhand = new SQLH();
             string respond = "";
             string stsql = "";
-
-            string olgoo = $" <a href=\"[link]\" class=\"shopping-cart-css\"><i class=\"ri-shopping-bag-line\"></i>سبد خرید <p class=\"shopping-cart-count-css\">[count]</p></a>";
+           
+            string olgoo = $" <span id=\"cart-count\" class=\"cart-count\">[count]</span>";
 
 
             if (Session["token"].ToString().Equals(""))
@@ -101,9 +101,9 @@ namespace narsShop
 
 
             if (basket.Count == 0)
-                return olgoo.Replace("[link]", "#").Replace("[count]", "");
+                return olgoo.Replace("[count]", "");
             else
-                return olgoo.Replace("[link]", "/pages/customershop.aspx").Replace("[count]", basket.Count.ToString().Trim());
+                return olgoo.Replace("[count]", basket.Count.ToString().Trim());
 
           
         }
