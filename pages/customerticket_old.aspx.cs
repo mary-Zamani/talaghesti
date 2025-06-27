@@ -1,53 +1,78 @@
 ﻿using System;
-using System.Collections.Generic;
+using System.Collections;
 using System.Data;
 using System.Linq;
 using System.Net.Http.Headers;
 using System.Net.Http;
+using System.Web;
+using System.Web.Security;
+using System.Web.UI;
+using System.Web.UI.HtmlControls;
+using System.Web.UI.WebControls;
+using System.Web.UI.WebControls.WebParts;
+using System.Xml.Linq;
+using TalaModelLibrary;
+using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
-using TalaModelLibrary;
+using RestSharp;
+using System.Collections.Generic;
+using System.Net.Http.Headers;
+using System.Net.Http;
 using System.Text.Json;
+using Newtonsoft.Json.Linq;
 
-namespace narsShop.pages
+
+namespace narsShop
 {
-    public partial class customerticket : System.Web.UI.Page
+    public partial class customerticket_old : System.Web.UI.Page
     {
         SQLH sqhand;
         token tn;
-        string paytype = "";
+        string paytype="";
         string orderid = "";
         string source = "";
         protected void Page_Load(object sender, EventArgs e)
         {
+
+           
             tn = (token)Session["token"];
 
             if (tn.Token == null)
                 Response.Redirect("~");
 
 
-            lbl_subtit.Text = "لطفا در صوررت هرگونه مشکل آن را با ما درمیان بگزارید تا در اسرع وقت پیگیری شود";
+                lbl_title.Text = "ثبت تیکت پشتیبانی";
+                lbl_subtit.Text = "لطفا در صوررت هرگونه مشکل آن را با ما درمیان بگزارید تا در اسرع وقت پیگیری شود";
 
-            List<ticket> tickets = callapi(tn.Token);
+            List<ticket> tickets= callapi(tn.Token);
             string resp = "<table class=\"table table-advance table-bordered\">";
-            foreach (ticket t in tickets)
+            foreach(ticket t in tickets)
             {
-                resp += "<tr><td class=\"card  shadow-inset border-light\">" + t.request + "<br>" + t.respond + "</td></tr>";
+                resp += "<tr><td class=\"card bg-primary shadow-inset border-light\">" + t.request + "<br>" + t.respond + "</td></tr>";
             }
             resp += "</table>";
             lbl_tbl.Text = resp;
 
-           
-            
+            lbl_customername.Text = tn.Name;
+            lbl_customerphone.Text = tn.mobileno;
+            lbl_customercode.Text = tn.vas;
+            Dictionary<string, string> customerdic = decode.customerinfo(tn.Token, Session["apiurl"].ToString());
+            lbl_kif.Text = myconvert.todecimal(customerdic["walet"]).ToString("0,0");
+            lbl_totalbed.Text = myconvert.todecimal(customerdic["mande"]).ToString("0,0");
+            lbl_points.Text = customerdic["point"];
+            lbl_customeraddress.Text = customerdic["address"];
+            lbl_shmeli.Text = customerdic["shmeli"];
+
         }
+
+
+
         async Task<string> Callapi_pay(string Token, string contnt)
         {
             string json = string.Empty;
             DataTable dt = new DataTable();
-            string apiUrl = Session["apiurl"] + "/api/tickets/send";
+            string apiUrl = Session["apiurl"]+"/api/tickets/send";
             HttpClient client = new HttpClient();
             client.BaseAddress = new Uri(apiUrl);
             client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
@@ -55,7 +80,7 @@ namespace narsShop.pages
 
             var values = new Dictionary<string, string>
               {
-                  { "token", Token },
+                  { "token", Token },  
                   { "contnt", contnt }
             };
 
@@ -106,8 +131,8 @@ namespace narsShop.pages
         List<ticket> callapi(string token)
         {
             List<ticket> json = new List<ticket>();
-
-            string apiUrl = Session["apiurl"] + "/api/tickets/getlist/";
+            
+            string apiUrl = Session["apiurl"]+"/api/tickets/getlist/";
             HttpClient client = new HttpClient();
             client.BaseAddress = new Uri(apiUrl);
             client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
@@ -124,5 +149,10 @@ namespace narsShop.pages
 
             return json;
         }
+
+
+
     }
+
+
 }

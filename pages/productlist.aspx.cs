@@ -47,7 +47,10 @@ namespace narsShop.pages
             }
             set { ViewState["CurrentPage"] = value; }
         }
-
+        public Repeater RepeaterProducts
+        {
+            get { return rptProducts; }
+        }
         List<ProductViewModel> allProducts; // همه محصولات
 
         protected void Page_Load(object sender, EventArgs e)
@@ -81,8 +84,8 @@ namespace narsShop.pages
             paged.PageSize = pageSize;
             paged.CurrentPageIndex = 0;
 
-            master.RepeaterProducts.DataSource = paged;
-            master.RepeaterProducts.DataBind();
+             RepeaterProducts.DataSource = paged;
+            RepeaterProducts.DataBind();
 
             GeneratePagination();
         }
@@ -98,7 +101,7 @@ namespace narsShop.pages
 
         private void GeneratePagination()
         {
-            var master = (Main)this.Master;
+        
             int totalPages = GetTotalPages();
 
             int currentPage = GetPageFromQuery(); // تابعی که از QueryString صفحه فعلی رو می‌خونه
@@ -117,14 +120,9 @@ namespace narsShop.pages
 
             paginationHtml.Append($"<a href='productlist.aspx?={parent} &page={nextPage}' class='next'><i class='fa-solid fa-chevron-right moz'></i></a>");
 
-            var litPagination = master.FindControl("litPagination") as Literal;
-            if (litPagination != null)
-            {
+         
                 litPagination.Text = paginationHtml.ToString();
-            }
-
-            var customPagination = master.FindControl("customPagination");
-            if (customPagination != null)
+           
                 customPagination.Visible = totalPages > 1;
         }
         private int GetPageFromQuery()

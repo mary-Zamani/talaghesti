@@ -620,8 +620,9 @@
     <Content Include="Content\bootstrap.rtl.min.css" />
     <Content Include="index.aspx" />
     <Content Include="pages\customeraccount.aspx" />
-    <Content Include="pages\customercharge_old.aspx" />
+    <Content Include="pages\customercharge.aspx" />
     <Content Include="pages\customershop.aspx" />
+    <Content Include="pages\customerticket.aspx" />
     <Content Include="pages\product.aspx" />
     <Content Include="pages\productlist.aspx" />
     <Content Include="pages\productt.aspx" />
@@ -714,12 +715,13 @@
     <Content Include="Scripts\jquery-3.7.1.min.js" />
     <Content Include="Scripts\jquery-3.7.1.slim.js" />
     <Content Include="Scripts\jquery-3.7.1.slim.min.js" />
+    <Content Include="UDC\CustomerSidebar.ascx" />
     <Content Include="UDC\DateInput.ascx" />
     <Content Include="weblogin.aspx" />
     <Content Include="_fcv.aspx" />
     <Content Include="pages\customerinfo.aspx" />
     <Content Include="pages\successed.aspx" />
-    <Content Include="pages\customerticket.aspx" />
+    <Content Include="pages\customerticket_old.aspx" />
     <Content Include="invsummery.aspx" />
     <Content Include="neumorph\css\assets\img\about-us-1.jpg" />
     <Content Include="neumorph\css\assets\img\blog\blog-article-1.jpg" />
@@ -2774,7 +2776,7 @@
     <Content Include="pages\customervpay_next.aspx" />
     <Content Include="admin\list_akhbar.aspx" />
     <Content Include="admin\list_akhbar_add.aspx" />
-    <Content Include="pages\customercharge.aspx" />
+    <Content Include="pages\customercharge_old.aspx" />
     <Content Include="pages\customerexit.aspx" />
     <Content Include="ErrorPages\404.html" />
     <Content Include="ErrorPages\GenericErrorPage.html" />
@@ -3167,12 +3169,12 @@
     <Compile Include="pages\customeraccount.aspx.designer.cs">
       <DependentUpon>customeraccount.aspx</DependentUpon>
     </Compile>
-    <Compile Include="pages\customercharge_old.aspx.cs">
-      <DependentUpon>customercharge_old.aspx</DependentUpon>
+    <Compile Include="pages\customercharge.aspx.cs">
+      <DependentUpon>customercharge.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="pages\customercharge_old.aspx.designer.cs">
-      <DependentUpon>customercharge_old.aspx</DependentUpon>
+    <Compile Include="pages\customercharge.aspx.designer.cs">
+      <DependentUpon>customercharge.aspx</DependentUpon>
     </Compile>
     <Compile Include="pages\customershop.aspx.cs">
       <DependentUpon>customershop.aspx</DependentUpon>
@@ -3180,6 +3182,13 @@
     </Compile>
     <Compile Include="pages\customershop.aspx.designer.cs">
       <DependentUpon>customershop.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\customerticket.aspx.cs">
+      <DependentUpon>customerticket.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\customerticket.aspx.designer.cs">
+      <DependentUpon>customerticket.aspx</DependentUpon>
     </Compile>
     <Compile Include="pages\product.aspx.cs">
       <DependentUpon>product.aspx</DependentUpon>
@@ -3216,6 +3225,13 @@
     <Compile Include="Site1.Master.designer.cs">
       <DependentUpon>Site1.Master</DependentUpon>
     </Compile>
+    <Compile Include="UDC\CustomerSidebar.ascx.cs">
+      <DependentUpon>CustomerSidebar.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UDC\CustomerSidebar.ascx.designer.cs">
+      <DependentUpon>CustomerSidebar.ascx</DependentUpon>
+    </Compile>
     <Compile Include="UDC\DateInput.ascx.cs">
       <DependentUpon>DateInput.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -3251,12 +3267,12 @@
     <Compile Include="pages\successed.aspx.designer.cs">
       <DependentUpon>successed.aspx</DependentUpon>
     </Compile>
-    <Compile Include="pages\customerticket.aspx.cs">
-      <DependentUpon>customerticket.aspx</DependentUpon>
+    <Compile Include="pages\customerticket_old.aspx.cs">
+      <DependentUpon>customerticket_old.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="pages\customerticket.aspx.designer.cs">
-      <DependentUpon>customerticket.aspx</DependentUpon>
+    <Compile Include="pages\customerticket_old.aspx.designer.cs">
+      <DependentUpon>customerticket_old.aspx</DependentUpon>
     </Compile>
     <Compile Include="invsummery.aspx.cs">
       <DependentUpon>invsummery.aspx</DependentUpon>
@@ -3307,12 +3323,12 @@
     <Compile Include="mst.Master.designer.cs">
       <DependentUpon>mst.Master</DependentUpon>
     </Compile>
-    <Compile Include="pages\customercharge.aspx.cs">
-      <DependentUpon>customercharge.aspx</DependentUpon>
+    <Compile Include="pages\customercharge_old.aspx.cs">
+      <DependentUpon>customercharge_old.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="pages\customercharge.aspx.designer.cs">
-      <DependentUpon>customercharge.aspx</DependentUpon>
+    <Compile Include="pages\customercharge_old.aspx.designer.cs">
+      <DependentUpon>customercharge_old.aspx</DependentUpon>
     </Compile>
     <Compile Include="pages\customerexit.aspx.cs">
       <DependentUpon>customerexit.aspx</DependentUpon>

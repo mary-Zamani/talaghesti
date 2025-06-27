@@ -22,9 +22,7 @@ namespace narsShop
         protected static string callerurl = "~/pages/customeraccount.aspx";
         protected void Page_Load(object sender, EventArgs e)
         {
-            ;
-            ((Main)this.Master).showsectionShop = false;
-           
+   
             string tok = Request["tok"];
             string r = Request["r"];
 
@@ -79,8 +77,7 @@ namespace narsShop
 
 
 
-            //callerurl.Contains("index.aspx") || callerurl.Trim().EndsWith("talaghesti.com/") ||
-
+       
             if (callerurl.Contains("weblogin"))
                 callerurl = "~/pages/customeraccount.aspx";
 

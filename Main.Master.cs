@@ -22,21 +22,11 @@ namespace narsShop
             get { return sectionBbreadcumb.Visible; }
             set { sectionBbreadcumb.Visible = value; }
         }
-        public bool showsectionShop
-        {
-            get { return sectionShop.Visible; }
-            set { sectionShop.Visible = value; }
-        }
-   
-        public Repeater RepeaterProducts
-        {
-            get { return rptProducts; }
-        }
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            //lbl_loginpart.Text = loadpart("login");
-         
+            lblLogin.Text = loadpart("login");
+            loadBroudCom();
 
             TalaModelLibrary.token tn = (TalaModelLibrary.token)Session["token"];
         
@@ -68,15 +58,60 @@ namespace narsShop
         string loadpart(string newstype)
         {
             string respond = "";
-            string olgoo = $"<a href=\"[link]\"class=\"login-link-css\">[esm]</a>";
+            string olgoo = $"<a href=\"[link]\" > <i class=\"fa-solid fa-user\"></i>  [esm]</a>";
 
             TalaModelLibrary.token tn = (TalaModelLibrary.token)Session["token"];
             if (tn.Token == null)
 
-                return olgoo.Replace("[link]", "/weblogin.aspx").Replace("[esm]", "ورود");
+                return olgoo.Replace("[link]", "/weblogin.aspx").Replace("[esm]", "ورود/ثبت نام");
             else
-                return olgoo.Replace("[link]", "/pages/customeraccount.aspx").Replace("[esm]", "حساب من");
+                return olgoo.Replace("[link]", "/pages/customeraccount.aspx").Replace("[esm]", "حساب کاربری من");
 
+        }
+        void loadBroudCom()
+        {
+            string currentPage = System.IO.Path.GetFileName(Page.AppRelativeVirtualPath);
+
+            if (currentPage == "customershop.aspx")
+            {
+                string html = @"
+                 <ul class=""breadcumb-wrapper"">
+                 <li><a href=""/index.aspx""><i class=""fa-sharp fa-light fa-house""></i></a></li>
+                 <li><i class=""fa-solid fa-chevron-right moz""></i></li>
+                 <li>دسته بندی</li>
+                 <li><i class=""fa-solid fa-chevron-right moz""></i></li>
+                 <li><a href=""/pages/customershop.aspx"">فهرست سبد خرید</a></li>
+             </ul>";
+                lblTitle.Text =  html;
+            }
+            else if (currentPage == "customeraccount.aspx")
+            {
+                string html = @"
+                 <ul class=""breadcumb-wrapper"">
+                 <li><a href=""/index.aspx""><i class=""fa-sharp fa-light fa-house""></i></a></li>
+                 <li><i class=""fa-solid fa-chevron-right moz""></i></li>
+                 <li>دسته بندی</li>
+                 <li><i class=""fa-solid fa-chevron-right moz""></i></li>
+                 <li><a href=""/pages/customeraccount.aspx"">حساب کاربری من</a></li>
+             </ul>";
+                lblTitle.Text = html;
+            }
+            else if (currentPage == "productlist.aspx")
+            {
+                string parentId = Request.QueryString["parent"];
+                if (parentId == "13")
+                {
+                    string html = @"
+                 <ul class=""breadcumb-wrapper"">
+                 <li><a href=""/index.aspx""><i class=""fa-sharp fa-light fa-house""></i></a></li>
+                 <li><i class=""fa-solid fa-chevron-right moz""></i></li>
+                 <li>دسته بندی</li>
+                 <li><i class=""fa-solid fa-chevron-right moz""></i></li>
+                 <li><a href=""/productlist.aspx?parent=13"">سرویس ها</a></li>
+             </ul>";
+                    lblTitle.Text = html;
+                }
+            }
         }
         string shopcart()
         {
@@ -184,18 +219,6 @@ namespace narsShop
             return json;
         }
 
-        //string loadpart(string newstype)
-        //{
-        //    string respond = "";
-        //    string olgoo = $"<a href=\"[link]\"class=\"login-link-css\">[esm]</a>";
-
-        //    TalaModelLibrary.token tn = (TalaModelLibrary.token)Session["token"];
-        //    if (tn.Token == null)
-
-        //        return olgoo.Replace("[link]", "/weblogin.aspx").Replace("[esm]", "ورود");
-        //    else
-        //        return olgoo.Replace("[link]", "/pages/customeraccount.aspx").Replace("[esm]", "حساب من");
-
-        //}
+        
     }
 }

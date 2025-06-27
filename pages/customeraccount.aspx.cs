@@ -18,7 +18,7 @@ namespace narsShop.pages
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            ((Main)this.Master).showsectionShop = false;
+            
            tn = (token)Session["token"];
 
             if (tn.Token == null)
@@ -267,8 +267,6 @@ namespace narsShop.pages
         }
         protected void btnExist_Click(object sender, EventArgs e)
         {
-            
-            //Session.Abandon();
             TalaModelLibrary.token tn = new token();
 
             Session["token"] = tn;
@@ -283,16 +281,6 @@ namespace narsShop.pages
 
             Response.Redirect(Request.Url.AbsoluteUri.Substring(0, Request.Url.AbsoluteUri.IndexOf('/', 10)));
         }
-        protected void linkdargah_Click(object sender, EventArgs e)
-        {
-            string redirecturl = "";
-            if (myconvert.todecimal(txt_mablagh.Text) < 10000) return;
-
-            //if (paytype == "D")
-            //    redirecturl = (banksite + "/pages/customercharge_dargah2.aspx?tokenid=" + tn.Token + "&type=" + paytype + (myconvert.todecimal(txt_mablagh.Text) > 0 ? "&value=" + txt_mablagh.Text.Replace(",", "") : "") + (paytype.Equals("D") ? "&factor=" + Request["factor"].ToString().Trim() : "") + "&dargah=" + rb_dargah.SelectedValue);
-            //if (paytype == "W")
-            //    redirecturl = (banksite + "/pages/customercharge_dargah2.aspx?tokenid=" + tn.Token + "&type=" + paytype + (myconvert.todecimal(txt_mablagh.Text) > 0 ? "&value=" + txt_mablagh.Text.Replace(",", "") : "") + (paytype.Equals("D") ? "&factor=" + Request["factor"].ToString().Trim() : "") + "&dargah=" + rb_dargah.SelectedValue);
-            //Response.Redirect(redirecturl);
-        }
+        
     }
 }

@@ -155,7 +155,6 @@
 <body>
     <form id="form1" runat="server">
 
-        
         <!-- Preloader Start -->
         <div id="preloader" class="preloader">
              <div class="animation-preloader">
@@ -183,8 +182,11 @@
                 <span data-text-preloader="S" class="letters-loading">
                     S
                 </span>
-                <span data-text-preloader="TI" class="letters-loading">
-                    TI
+                <span data-text-preloader="T" class="letters-loading">
+                    T
+                </span>
+                <span data-text-preloader="I" class="letters-loading">
+                    I
                 </span>
             </div>
             <p class="text-center">بارگذاری</p>
@@ -278,14 +280,11 @@
                         </div>
                     </div>
                     <div class="lang">
-
+                          
 
                         <div class="user">
-                            <a href="/weblogin.aspx">
-                                <i class="fa-solid fa-user"></i>
-                                ورود
-                        </a>
-                        </div>
+                        <asp:Label ID="lblLogin" runat="server"></asp:Label>
+                        </div> 
                     </div>
 
                 </div>
@@ -299,6 +298,10 @@
                                         <img src="/assets/images/logo.png" style="width: 100px" alt="logo-img">
                                     </a>
                                 </div>
+                                
+                                
+                                
+                               
                                 <div class="header-cataegory-item color-3">
                                     <ul class="header-cataegory">
                                         <li>
@@ -452,16 +455,9 @@
                                 <div class="menu-cart">
                                     <div class="cart-box">
                                     </div>
-                                    
-                                      
-                                 <%--   <a id="lbl_shopcart" href="/pages/customershop.aspx" runat="server" class="cart-icon">
-                                        <i class="fa-regular fa-bag-shopping"></i>
-                                    </a>--%>
+
                                     <a id="shopcart" href="/pages/customershop.aspx" runat="server" class="cart-icon">
-    <i class="fa-regular fa-bag-shopping"></i>
-    <%--<span id="cart-count" class="cart-count">2</span>--%>
-                                         <asp:Label runat="server" ID="lbl_shopcart" />
-</a>
+                                     <i class="fa-regular fa-bag-shopping"></i><asp:Label runat="server" ID="lbl_shopcart" /></a>
 
                                      
                                 </div>
@@ -477,9 +473,6 @@
                 </div>
             </div>
         </header>
-
-
-
 
         <!-- Breadcumb Section Start -->
         <div id="sectionBbreadcumb" runat="server" class="breadcumb-section">
@@ -497,71 +490,14 @@
                     <img src="/assets/images/shape/breadcumb-shape1_4.png" alt="shape">
                 </div>
                 <div class="container">
-                    <ul class="breadcumb-wrapper">
-                        <li><a href="/index.aspx"><i class="fa-sharp fa-light fa-house"></i></a></li>
-                        <li><i class="fa-solid fa-chevron-right moz"></i></li>
-                        <li>دسته بندی</li>
-                        <li><i class="fa-solid fa-chevron-right moz"></i></li>
-                        <li>سرویس ها</li>
-                    </ul>
+                     <asp:Label ID="lblTitle" runat="server"></asp:Label>
+                  
                 </div>
             </div>
         </div>
         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
          </asp:ContentPlaceHolder>
-      
-
-        <!-- ProductList -->
-        <section id="sectionShop" runat="server" class="shop-section section-padding2 fix">
-            <div class="container">
-                <div class="row g-4">
-
-
-                    <asp:Repeater ID="rptProducts" runat="server">
-                        <ItemTemplate>
-                            <div class="col-xl-3 col-md-6">
-                                <div class="best-seller-product-items-two item-border">
-                                    <div class="icon-box2">
-                                        <button data-bs-toggle="modal" data-bs-target="#exampleModal2">
-                                            <i class="fa-regular fa-eye"></i>
-                                        </button>
-                                    </div>
-
-                                    <div class="best-seller-product-items-two__thumb">
-                                        <img src='<%# Eval("ImageUrl") %>' alt="thumb">
-                                    </div>
-
-                                    <div class="best-seller-product-items-two__content">
-                                        <div class="best-seller-product-items-two__details">
-                                            <p class="best-seller-product-items-two__details--subtitle">
-                                                <%# Eval("Subtitle") %>
-                                            </p>
-                                            <h6 class="best-seller-product-items-two__details--title">
-                                                <a href='<%# Eval("DetailsUrl") %>'><%# Eval("Title") %></a>
-                                            </h6>
-
-                                            <div class="best-seller-product-items-two__details--price">
-                                                <span class="d-block">قیمت: <%# Eval("Price") %> تومان</span>
-                                                <span class="d-block">پیش پرداخت: <%# Eval("PrePayment") %> تومان</span>
-                                                <span class="d-block">وزن: <%# Eval("Weight") %></span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </ItemTemplate>
-                    </asp:Repeater>
-
-                </div>
-                <div class="pagination" id="customPagination" runat="server" visible="false">
-                    <asp:Literal ID="litPagination" runat="server"></asp:Literal>
-                </div>
-
-            </div>
-        </section>
-
-       
-
+ 
         <!-- Feature Section    S T A R T -->
         <section class="feature-section section-padding2 fix">
             <div class="container">

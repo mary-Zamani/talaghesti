@@ -18,6 +18,7 @@ using ZarinPal;
 using System.Text;
 using System.Threading.Tasks;
 using RestSharp;
+using Telerik.Web.UI.PageLayout;
 
 
 namespace narsShop
@@ -29,6 +30,8 @@ namespace narsShop
         string paytype="";
         string orderid = "";
         string source = "";
+        //const string banksite = "https://abshode.net";
+        const string banksite = "https://ghestitala.com";
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -41,21 +44,24 @@ namespace narsShop
 
             if (Request["type"].Equals("W"))
             {
-                lbl_title.Text = "شارژ کیف پول";
-                lbl_subtit.Text = "لطفا مبلغ مورد نظر جهت شارژ کیف پول را وارد نمایید";
+                lbl_title.Text = "شارژ کیف پول ";
                 paytype = "W";
                 Btn_fkif.Enabled = false;
+                txt_pr.Enabled = false;
             }
             if (Request["type"].Equals("D"))
             {
-                lbl_title.Text = "پرداخت قسط";
-                lbl_subtit.Text = "لطفا مبلغ قسط مورد نظر جهت پرداخت را وارد کنید";
+                lbl_title.Text = " پرداخت قسط ";
                 paytype= "D";
                 Btn_fkif.Enabled = true;
+                txt_pr.Enabled = true;
             }
             if (Request.Params.AllKeys.Contains("value"))
+            {
                 txt_pr.Text = Request["value"];
-          
+                txtprice.Text = Request["value"];
+                txt_mablagh.Text = Request["value"];
+            }
 
 
 
@@ -69,15 +75,80 @@ namespace narsShop
             lbl_customeraddress.Text = customerdic["address"];
             lbl_shmeli.Text = customerdic["shmeli"];
 
+            if (!IsPostBack)
+            {
+                txtdate.Text = persiandate.datef();
+            }
+
+        
+            //linkshargkif.NavigateUrl = "https://ghestitala.com/pages/customercharge_dargah2.aspx?type=W&tokenid=" + tn.Token;
         }
 
+        protected void Btnsend_Click(object sender, EventArgs e)
+        {
+            string orderid = "W";
+            try
+            {
+                orderid = Request["factor"].ToString().Trim();
+            }
+            catch { }
+
+            if (myconvert.toint(txtkart.Text) <1 ||  txtkart.Text.Trim().Length < 4)
+            {
+                Response.Write(String.Format("<script>alert('اشکال در شماره کارت. پیام ارسال نشد!')</script>"));
+                return;
+            }
+            if (txtpeigiri.Text.Trim().Length < 4 || txtpeigiri.Text.Trim().Equals(tn.vas) || txtpeigiri.Text.Trim().Equals(orderid))
+            {
+                Response.Write(String.Format("<script>alert('اشکال در شماره پیگیری. لطفا بعد از انجام کارت به کارت شماره پیگیری اعلام شده از بانک را وارد کنید!')</script>"));
+                return;
+            }
+            if (txtprice.Text.Trim().Length < 5)
+            {
+                Response.Write(String.Format("<script>alert('اشکال در مبلغ. پیام ارسال نشد!')</script>"));
+                return;
+            }
+            if (txtdate.Text.Trim().Length < 5 || !persiandate.isvalid(txtdate.Text) || persiandate.datediff(persiandate.datef(), txtdate.Text)<0)
+            {
+                Response.Write(String.Format("<script>alert('اشکال در تاریخ. پیام ارسال نشد!')</script>"));
+                return;
+            }
 
 
-        async Task<string> Callapi_pay(string Token, string authority,long amount,string ptype,string factor)
+
+            string payam = "$$$ : " + orderid.Trim() + " ~ " + txtkart.Text.Trim() + " ~ " + txtprice.Text.Trim() + " ~ " + txtdate.Text.Trim()+" ~ "+txtpeigiri.Text.Trim();
+
+            var resp = Callapi_pay(tn.Token, payam);
+            resp.Wait();
+
+            if (!resp.Result.ToUpper().Equals("ERROR") && !resp.Result.StartsWith("-"))
+            {
+                Response.Write(String.Format("<script>alert('اطلاعات واریزی شما با موفقیت دریافت شد و در حال بررسی می باشد. پس از تایید از طریق پیامک به شما اطلاع داده خواهد شد')</script>"));
+                txtkart.Text = "";
+                txtprice.Text = "";
+                txtdate.Text = "";
+            }
+            else
+            {
+                if (resp.Result.Trim().Equals("-1"))
+                {
+                    Response.Write(String.Format("<script>alert('این واریزی در حال بررسی است، منتظر پیامک تایید باشید')</script>"));
+                } else if (resp.Result.Trim().Equals("-2"))
+                {
+                    Response.Write(String.Format("<script>alert('این واریزی قبلا در صورت حساب شما اعمال شده است')</script>"));
+                }
+                else
+                {
+                    Response.Write(String.Format("<script>alert('اشکال در ثبت')</script>"));
+                }
+            }
+        }
+
+        async Task<string> Callapi_pay(string Token, string contnt)
         {
             string json = string.Empty;
             DataTable dt = new DataTable();
-            string apiUrl = Session["apiurl"]+"/api/payrequest/";
+            string apiUrl = Session["apiurl"] + "/api/tickets/send";
             HttpClient client = new HttpClient();
             client.BaseAddress = new Uri(apiUrl);
             client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
@@ -85,17 +156,14 @@ namespace narsShop
 
             var values = new Dictionary<string, string>
               {
-                  { "token", Token },  
-                  { "authority", authority },
-                  { "amount",amount.ToString()  },
-                  { "paytype",ptype },
-                {"factor",factor }
+                  { "token", Token },
+                  { "contnt", contnt }
             };
 
             var content = new FormUrlEncodedContent(values);
 
 
-            string resp = JsonConvert.SerializeObject(values);
+            string resp = Newtonsoft.Json.JsonConvert.SerializeObject(values);
             var request = new HttpRequestMessage
             {
                 Method = HttpMethod.Post,
@@ -120,102 +188,17 @@ namespace narsShop
             return json;
         }
 
-        protected void Btn_next_Click(object sender, EventArgs e)
-        {
-            long Amount = myconvert.toint(txt_pr.Text.Trim()) / 10;
-            if (Amount < 1000)
-            {
-                Response.Write(String.Format("<script>alert('حداقل مبلغ پرداخت 1000 تومان می باشد')</script>"));
-                return;
-            }
-            if (paytype.Equals("W"))
-            {
-                orderid = GetRandomAlphaNumeric();
-            }else
-            {
-                orderid = Request["factor"].ToString().Trim();
-            }
-            
-            var client = new RestClient("https://nextpay.org/nx/gateway/token");
-            var request = new RestRequest("https://nextpay.org/nx/gateway/token",RestSharp.Method.Post);
-            
-            request.AddHeader("Content-Type", "application/x-www-form-urlencoded");
-            request.AddParameter("api_key", "803a4a6d-65a6-4583-8660-01859617f427");
-            request.AddParameter("amount", Amount.ToString());
-            request.AddParameter("order_id", orderid);
-            request.AddParameter("customer_phone", tn.mobileno);
-            //request.AddParameter("custom_json_fields", "{ \"productName\":\"شارژ کیف پول\" , \"id\":"+tn.vas+" }");
-            request.AddParameter("callback_uri", "http://talaghesti.com/pages/customervpay_next.aspx");
-            RestResponse response = client.Execute(request);
-
-            nextrespond nr = JsonConvert.DeserializeObject<nextrespond>(response.Content);
-
-            if (response.StatusCode == System.Net.HttpStatusCode.OK)
-            {
-                var resp = Callapi_pay(tn.Token, nr.trans_id, Amount, paytype, orderid);
-                resp.Wait();
-
-                if (resp.Result.ToUpper().Equals("OK"))
-                    Response.Redirect("https://nextpay.org/nx/gateway/payment/" + nr.trans_id);
-                else
-                {
-                    Response.Write(String.Format("<script>alert('به علت اشکال در سرور امکان اتصال به درگاه پرداخت نمی باشد')</script>"));
-                }
-                    
-
-            }
-        }
-
-        protected void Btn_zarin_Click(object sender, EventArgs e)
-        {
-            ZarinPal.ZarinPal zarinpal = ZarinPal.ZarinPal.Get();
-
-            String MerchantID = "c5f58444-f418-11ea-afe6-000c295eb8fc";
-            String CallbackURL = "http://talaghesti.com/pages/customervpay.aspx";
-            long Amount = myconvert.toint(txt_pr.Text.Trim()) / 10;
-            if (Amount < 1000)
-            {
-                return;
-            }
-            String Description = "شارژ کیف پول - طلافروشی نشاط";
-
-            ZarinPal.PaymentRequest pr = new ZarinPal.PaymentRequest(MerchantID, Amount, CallbackURL, Description);
-
-
-
-            var res = zarinpal.InvokePaymentRequest(pr);
-
-            if (res.Status == 100)
-            {
-
-                var resp = Callapi_pay(tn.Token, res.Authority, Amount, "W", "0");
-                resp.Wait();
-
-                string respond = JsonConvert.DeserializeObject<string>(resp.Result);
-                if (respond.Equals("OK"))
-                    Response.Redirect(res.PaymentURL);
-            }
-
-        }
-
-        public static string GetRandomAlphaNumeric()
-        {
-            var random= new Random();
-            var chars = "abcdefghijklmnopqrstuvwxyz0123456789";
-            return new string(chars.Select(c => chars[random.Next(chars.Length)]).Take(12).ToArray());
-        }
-
         protected void Btn_fkif_Click(object sender, EventArgs e)
         {
-            long Amount = myconvert.toint(txt_pr.Text.Trim()) / 10;
+            long Amount = myconvert.toint(txt_pr.Text.Trim()) ;
             string orderid = Request["factor"].ToString().Trim();
 
-            if (Amount < 1000) {
-                Response.Write(String.Format("<script>alert('حداقل مبلغ پرداخت 1000 تومان می باشد')</script>"));
+            if (Amount < 100000) {
+                Response.Write(String.Format("<script>alert('حداقل مبلغ پرداخت 10.000 تومان می باشد')</script>"));
                 return; 
             }
 
-            if (Amount*10 > myconvert.toint(lbl_kif.Text))
+            if (Amount > myconvert.toint(lbl_kif.Text))
             {
                 Response.Write(String.Format("<script>alert('.مبلغ نمی تواند بیش از موجودی کیف پول باشد. موجودی کیف پول شما "+ lbl_kif.Text.Trim()+"')</script>"));
                 return; 
@@ -280,13 +263,21 @@ namespace narsShop
 
             return json;
         }
+
+        protected void linkdargah_Click(object sender, EventArgs e)
+        {
+            string redirecturl = "";
+if (myconvert.todecimal(txt_mablagh.Text)<10000) return;
+
+            if (paytype == "D")
+                redirecturl=(banksite+"/pages/customercharge_dargah2.aspx?tokenid=" + tn.Token + "&type=" + paytype + (myconvert.todecimal(txt_mablagh.Text) > 0 ? "&value=" + txt_mablagh.Text.Replace(",","") : "") + (paytype.Equals("D") ? "&factor=" + Request["factor"].ToString().Trim() : "")+ "&dargah="+rb_dargah.SelectedValue);
+            if (paytype == "W")
+                redirecturl=(banksite+"/pages/customercharge_dargah2.aspx?tokenid=" + tn.Token + "&type=" + paytype + (myconvert.todecimal(txt_mablagh.Text) > 0 ? "&value=" + txt_mablagh.Text.Replace(",","") : "") + (paytype.Equals("D") ? "&factor=" + Request["factor"].ToString().Trim() : "") + "&dargah=" + rb_dargah.SelectedValue);
+    Response.Redirect(redirecturl);
+        }
     }
 
 
-    public class nextrespond
-    {
-       public  int code { get; set; }
-       public string trans_id { get; set; }
-    }
+    
 
 }

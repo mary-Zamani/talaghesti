@@ -83,7 +83,7 @@
         </section>
         
 
-       <%--  <!-- Jewelry Category Section start  -->
+      <%--   <!-- Jewelry Category Section start  -->
  <section class="jewelry-category-section section-padding2 fix" id="category">
      <div class="container">
          <div class="row gy-5">
@@ -138,7 +138,7 @@
          </div>
      </div>
  </section>--%>
-
+     
         <!-- Best seller product Section start  -->
         <section id="SectionCategory" runat="server" class="best-seller-product-items-section section-padding2 bg-color3 fix">
             <div class="best-seller-product-items-container-wrapper style4">
@@ -217,7 +217,8 @@
                                         </div>
 
                                         <div class="best-seller-product-items-two__thumb">
-                                            <img src="/assets/images/image/servis.jpg" alt="thumb">
+                                            <a href="/pages/productlist.aspx?parent=13">
+                                                <img src="/assets/images/image/servis.jpg" alt="thumb"></a>
                                         </div>
                                         <div class="best-seller-product-items-two__content">
                                             <div class="best-seller-product-items-two__details">
@@ -240,7 +241,8 @@
                                         </div>
 
                                         <div class="best-seller-product-items-two__thumb">
-                                            <img src="/assets/images/image/nim-set.jpg" alt="thumb">
+                                            <a href="/pages/productlist.aspx?parent=10">
+                                                <img src="/assets/images/image/nim-set.jpg" alt="thumb"></a>
                                         </div>
                                         <div class="best-seller-product-items-two__content">
                                             <div class="best-seller-product-items-two__details">
@@ -263,7 +265,8 @@
                                         </div>
 
                                         <div class="best-seller-product-items-two__thumb">
-                                            <img src="/assets/images/image/gardanband.jpg" alt="thumb">
+                                            <a href="/pages/productlist.aspx?parent=14">
+                                                <img src="/assets/images/image/gardanband.jpg" alt="thumb"></a>
                                         </div>
                                         <div class="best-seller-product-items-two__content">
                                             <div class="best-seller-product-items-two__details">
@@ -286,7 +289,8 @@
                                         </div>
 
                                         <div class="best-seller-product-items-two__thumb">
-                                            <img src="/assets/images/image/zanjir.jpg" alt="thumb">
+                                            <a href="/pages/productlist.aspx?parent=17">
+                                                <img src="/assets/images/image/zanjir.jpg" alt="thumb"></a>
                                         </div>
                                         <div class="best-seller-product-items-two__content">
                                             <div class="best-seller-product-items-two__details">
@@ -309,7 +313,8 @@
                                         </div>
 
                                         <div class="best-seller-product-items-two__thumb">
-                                            <img src="/assets/images/image/ru-lebasi.jpg" alt="thumb">
+                                            <a href="/pages/productlist.aspx?parent=36">
+                                                <img src="/assets/images/image/ru-lebasi.jpg" alt="thumb"></a>
                                         </div>
                                         <div class="best-seller-product-items-two__content">
                                             <div class="best-seller-product-items-two__details">
@@ -332,7 +337,8 @@
                                         </div>
 
                                         <div class="best-seller-product-items-two__thumb">
-                                            <img src="/assets/images/image/pelak.jpg" alt="thumb">
+                                            <a href="/pages/productlist.aspx?parent=18">
+                                                <img src="/assets/images/image/pelak.jpg" alt="thumb"></a>
                                         </div>
                                         <div class="best-seller-product-items-two__content">
                                             <div class="best-seller-product-items-two__details">
@@ -356,7 +362,8 @@
                                         </div>
 
                                         <div class="best-seller-product-items-two__thumb">
-                                            <img src="/assets/images/image/dastband.jpg" alt="thumb">
+                                            <a href="/pages/productlist.aspx?parent=15">
+                                                <img src="/assets/images/image/dastband.jpg" alt="thumb"></a>
                                         </div>
                                         <div class="best-seller-product-items-two__content">
                                             <div class="best-seller-product-items-two__details">
@@ -379,7 +386,8 @@
                                         </div>
 
                                         <div class="best-seller-product-items-two__thumb">
-                                            <img src="/assets/images/image/alango.jpg" alt="thumb">
+                                            <a href="/pages/productlist.aspx?parent=12">
+                                                <img src="/assets/images/image/alango.jpg" alt="thumb"></a>
                                         </div>
                                         <div class="best-seller-product-items-two__content">
                                             <div class="best-seller-product-items-two__details">
@@ -402,7 +410,8 @@
                                         </div>
 
                                         <div class="best-seller-product-items-two__thumb">
-                                            <img src="/assets/images/image/halghe-set.jpg" alt="thumb">
+                                            <a href="/pages/productlist.aspx?parent=20">
+                                                <img src="/assets/images/image/halghe-set.jpg" alt="thumb"></a>
                                         </div>
                                         <div class="best-seller-product-items-two__content">
                                             <div class="best-seller-product-items-two__details">
@@ -425,7 +434,8 @@
                                         </div>
 
                                         <div class="best-seller-product-items-two__thumb">
-                                            <img src="/assets/images/image/soliter.jpg" alt="thumb">
+                                            <a href="/pages/productlist.aspx?parent=19">
+                                                <img src="/assets/images/image/soliter.jpg" alt="thumb"></a>
                                         </div>
                                         <div class="best-seller-product-items-two__content">
                                             <div class="best-seller-product-items-two__details">
@@ -449,7 +459,8 @@
                                         </div>
 
                                         <div class="best-seller-product-items-two__thumb">
-                                            <img src="/assets/images/image/ring.jpg" alt="thumb">
+                                            <a href="/pages/productlist.aspx?parent=23">حلقه رینگی
+                                                <img src="/assets/images/image/ring.jpg" alt="thumb"></a>
                                         </div>
                                         <div class="best-seller-product-items-two__content">
                                             <div class="best-seller-product-items-two__details">
@@ -472,7 +483,8 @@
                                         </div>
 
                                         <div class="best-seller-product-items-two__thumb">
-                                            <img src="/assets/images/image/angoshtar.jpg" alt="thumb">
+                                            <a href="/pages/productlist.aspx?parent=11">انگشتر
+                                                <img src="/assets/images/image/angoshtar.jpg" alt="thumb"></a>
                                         </div>
                                         <div class="best-seller-product-items-two__content">
                                             <div class="best-seller-product-items-two__details">
@@ -496,7 +508,8 @@
                                         </div>
 
                                         <div class="best-seller-product-items-two__thumb">
-                                            <img src="/assets/images/image/aviz-saat.jpg" alt="thumb">
+                                            <a href="/pages/productlist.aspx?parent=21">
+                                                <img src="/assets/images/image/aviz-saat.jpg" alt="thumb"></a>
                                         </div>
                                         <div class="best-seller-product-items-two__content">
                                             <div class="best-seller-product-items-two__details">
@@ -519,7 +532,8 @@
                                         </div>
 
                                         <div class="best-seller-product-items-two__thumb">
-                                            <img src="/assets/images/image/gushvare.jpg" alt="thumb">
+                                            <a href="/pages/productlist.aspx?parent=16">
+                                                <img src="/assets/images/image/gushvare.jpg" alt="thumb"></a>
                                         </div>
                                         <div class="best-seller-product-items-two__content">
                                             <div class="best-seller-product-items-two__details">
@@ -543,7 +557,8 @@
                                         </div>
 
                                         <div class="best-seller-product-items-two__thumb">
-                                            <img src="/assets/images/image/pierce.jpg" alt="thumb">
+                                            <a href="/pages/productlist.aspx?parent=37">
+                                                <img src="/assets/images/image/pierce.jpg" alt="thumb"></a>
                                         </div>
                                         <div class="best-seller-product-items-two__content">
                                             <div class="best-seller-product-items-two__details">
@@ -566,7 +581,8 @@
                                         </div>
 
                                         <div class="best-seller-product-items-two__thumb">
-                                            <img src="/assets/images/image/paband.jpg" alt="thumb">
+                                            <a href="/pages/productlist.aspx?parent=34">
+                                                <img src="/assets/images/image/paband.jpg" alt="thumb"></a>
                                         </div>
                                         <div class="best-seller-product-items-two__content">
                                             <div class="best-seller-product-items-two__details">
@@ -595,7 +611,8 @@
                                         </div>
 
                                         <div class="best-seller-product-items-two__thumb">
-                                            <img src="/assets/images/image/servis.jpg" alt="thumb">
+                                            <a href="/pages/productlist.aspx?parent=13">
+                                                <img src="/assets/images/image/servis.jpg" alt="thumb"></a>
                                         </div>
                                         <div class="best-seller-product-items-two__content">
                                             <div class="best-seller-product-items-two__details">
@@ -618,7 +635,8 @@
                                         </div>
 
                                         <div class="best-seller-product-items-two__thumb">
-                                            <img src="/assets/images/image/nim-set.jpg" alt="thumb">
+                                            <a href="/pages/productlist.aspx?parent=10">
+                                                <img src="/assets/images/image/nim-set.jpg" alt="thumb"></a>
                                         </div>
                                         <div class="best-seller-product-items-two__content">
                                             <div class="best-seller-product-items-two__details">
@@ -646,7 +664,8 @@
                                         </div>
 
                                         <div class="best-seller-product-items-two__thumb">
-                                            <img src="/assets/images/image/gardanband.jpg" alt="thumb">
+                                            <a href="/pages/productlist.aspx?parent=14">
+                                                <img src="/assets/images/image/gardanband.jpg" alt="thumb"></a>
                                         </div>
                                         <div class="best-seller-product-items-two__content">
                                             <div class="best-seller-product-items-two__details">
@@ -669,7 +688,8 @@
                                         </div>
 
                                         <div class="best-seller-product-items-two__thumb">
-                                            <img src="/assets/images/image/zanjir.jpg" alt="thumb">
+                                            <a href="/pages/productlist.aspx?parent=17">
+                                                <img src="/assets/images/image/zanjir.jpg" alt="thumb"></a>
                                         </div>
                                         <div class="best-seller-product-items-two__content">
                                             <div class="best-seller-product-items-two__details">
@@ -692,7 +712,8 @@
                                         </div>
 
                                         <div class="best-seller-product-items-two__thumb">
-                                            <img src="/assets/images/image/ru-lebasi.jpg" alt="thumb">
+                                            <a href="/pages/productlist.aspx?parent=36">
+                                                <img src="/assets/images/image/ru-lebasi.jpg" alt="thumb"></a>
                                         </div>
                                         <div class="best-seller-product-items-two__content">
                                             <div class="best-seller-product-items-two__details">
@@ -715,7 +736,8 @@
                                         </div>
 
                                         <div class="best-seller-product-items-two__thumb">
-                                            <img src="/assets/images/image/pelak.jpg" alt="thumb">
+                                            <a href="/pages/productlist.aspx?parent=18">
+                                                <img src="/assets/images/image/pelak.jpg" alt="thumb"></a>
                                         </div>
                                         <div class="best-seller-product-items-two__content">
                                             <div class="best-seller-product-items-two__details">
@@ -739,12 +761,13 @@
                                             <button data-bs-toggle="modal" data-bs-target="#exampleModal2">
                                                 <i class="fa-regular fa-eye"></i>
                                             </button>
-                                            <a href="wishlist.html"><i class="fa-regular fa-heart"></i></a>
-                                            <a href="#"><i class="fa-light fa-bag-shopping"></i></a>
+                                           
+                                           
                                         </div>
 
                                         <div class="best-seller-product-items-two__thumb">
-                                            <img src="/assets/images/image/dastband.jpg" alt="thumb">
+                                            <a href="/pages/productlist.aspx?parent=15">
+                                                <img src="/assets/images/image/dastband.jpg" alt="thumb"></a>
                                         </div>
                                         <div class="best-seller-product-items-two__content">
                                             <div class="best-seller-product-items-two__details">
@@ -767,7 +790,8 @@
                                         </div>
 
                                         <div class="best-seller-product-items-two__thumb">
-                                            <img src="/assets/images/image/alango.jpg" alt="thumb">
+                                            <a href="/pages/productlist.aspx?parent=12">
+                                                <img src="/assets/images/image/alango.jpg" alt="thumb"></a>
                                         </div>
                                         <div class="best-seller-product-items-two__content">
                                             <div class="best-seller-product-items-two__details">
@@ -795,7 +819,8 @@
                                         </div>
 
                                         <div class="best-seller-product-items-two__thumb">
-                                            <img src="/assets/images/image/halghe-set.jpg" alt="thumb">
+                                            <a href="/pages/productlist.aspx?parent=20">
+                                                <img src="/assets/images/image/halghe-set.jpg" alt="thumb"></a>
                                         </div>
                                         <div class="best-seller-product-items-two__content">
                                             <div class="best-seller-product-items-two__details">
@@ -818,7 +843,8 @@
                                         </div>
 
                                         <div class="best-seller-product-items-two__thumb">
-                                            <img src="/assets/images/image/soliter.jpg" alt="thumb">
+                                            <a href="/pages/productlist.aspx?parent=19">
+                                                <img src="/assets/images/image/soliter.jpg" alt="thumb"></a>
                                         </div>
                                         <div class="best-seller-product-items-two__content">
                                             <div class="best-seller-product-items-two__details">
@@ -842,7 +868,8 @@
                                         </div>
 
                                         <div class="best-seller-product-items-two__thumb">
-                                            <img src="/assets/images/image/ring.jpg" alt="thumb">
+                                            <a href="/pages/productlist.aspx?parent=23">
+                                                <img src="/assets/images/image/ring.jpg" alt="thumb"></a>
                                         </div>
                                         <div class="best-seller-product-items-two__content">
                                             <div class="best-seller-product-items-two__details">
@@ -865,7 +892,8 @@
                                         </div>
 
                                         <div class="best-seller-product-items-two__thumb">
-                                            <img src="/assets/images/image/angoshtar.jpg" alt="thumb">
+                                            <a href="/pages/productlist.aspx?parent=11">
+                                                <img src="/assets/images/image/angoshtar.jpg" alt="thumb"></a>
                                         </div>
                                         <div class="best-seller-product-items-two__content">
                                             <div class="best-seller-product-items-two__details">
@@ -894,7 +922,8 @@
                                         </div>
 
                                         <div class="best-seller-product-items-two__thumb">
-                                            <img src="/assets/images/image/aviz-saat.jpg" alt="thumb">
+                                            <a href="/pages/productlist.aspx?parent=21">
+                                                <img src="/assets/images/image/aviz-saat.jpg" alt="thumb"></a>
                                         </div>
                                         <div class="best-seller-product-items-two__content">
                                             <div class="best-seller-product-items-two__details">
@@ -917,7 +946,8 @@
                                         </div>
 
                                         <div class="best-seller-product-items-two__thumb">
-                                            <img src="/assets/images/image/gushvare.jpg" alt="thumb">
+                                            <a href="/pages/productlist.aspx?parent=16">
+                                                <img src="/assets/images/image/gushvare.jpg" alt="thumb"></a>
                                         </div>
                                         <div class="best-seller-product-items-two__content">
                                             <div class="best-seller-product-items-two__details">
@@ -941,7 +971,8 @@
                                         </div>
 
                                         <div class="best-seller-product-items-two__thumb">
-                                            <img src="/assets/images/image/pierce.jpg" alt="thumb">
+                                             <a href="/pages/productlist.aspx?parent=37">
+                                                 <img src="/assets/images/image/pierce.jpg" alt="thumb"></a>
                                         </div>
                                         <div class="best-seller-product-items-two__content">
                                             <div class="best-seller-product-items-two__details">
@@ -964,7 +995,8 @@
                                         </div>
 
                                         <div class="best-seller-product-items-two__thumb">
-                                            <img src="/assets/images/image/paband.jpg" alt="thumb">
+                                            <a href="/pages/productlist.aspx?parent=34">
+                                                <img src="/assets/images/image/paband.jpg" alt="thumb"></a>
                                         </div>
                                         <div class="best-seller-product-items-two__content">
                                             <div class="best-seller-product-items-two__details">

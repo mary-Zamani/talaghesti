@@ -49,6 +49,10 @@ namespace narsShop
             decimal totaltakhfif = 0;
             foreach (DataRowView dr in basket)
             {
+
+
+
+
                 _listkala += $"<div class=\"card mb-3\">" +
                       $" <div class=\"d-flex flex-row align-items-center\"> <table width=\"100%\"><tr><td rowspan=4>" +
                       $" <img src=\"/img/kcode/" + dr["kcode"].ToString().Trim() + $".jpg\" class=\"img-fluid rounded-3\" alt=\"" + decode.k2name(dr["kcode"].ToString()) + "\" style=\"width: 170px;\"></td><td>" +

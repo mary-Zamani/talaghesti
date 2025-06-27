@@ -33,8 +33,7 @@ namespace narsShop.pages
         string etiket_list = "";
         protected void Page_Load(object sender, EventArgs e)
         {
-        
-            ((Main)this.Master).showsectionShop = false;
+
             firstetiket.Text = "";
             kcode = Request["kcode"].Trim();
             sqhand = new SQLH();

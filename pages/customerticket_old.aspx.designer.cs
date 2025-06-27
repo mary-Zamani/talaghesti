@@ -7,21 +7,12 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace narsShop.pages
+namespace narsShop
 {
 
 
-    public partial class customercharge
+    public partial class customerticket_old
     {
-
-        /// <summary>
-        /// CustomerSidebar1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::narsShop.UDC.CustomerSidebar CustomerSidebar1;
 
         /// <summary>
         /// lbl_title control.
@@ -42,6 +33,33 @@ namespace narsShop.pages
         protected global::System.Web.UI.WebControls.Label lbl_subtit;
 
         /// <summary>
+        /// txt_cnt control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txt_cnt;
+
+        /// <summary>
+        /// Btn_save control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Btn_save;
+
+        /// <summary>
+        /// lbl_tbl control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbl_tbl;
+
+        /// <summary>
         /// lbl_notif control.
         /// </summary>
         /// <remarks>
@@ -51,93 +69,89 @@ namespace narsShop.pages
         protected global::System.Web.UI.WebControls.Label lbl_notif;
 
         /// <summary>
-        /// txtkart control.
+        /// lbl_customername control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtkart;
+        protected global::System.Web.UI.WebControls.Label lbl_customername;
 
         /// <summary>
-        /// txtprice control.
+        /// lbl_customercode control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtprice;
+        protected global::System.Web.UI.WebControls.Label lbl_customercode;
 
         /// <summary>
-        /// txtpeigiri control.
+        /// lbl_customeraddress control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtpeigiri;
+        protected global::System.Web.UI.WebControls.Label lbl_customeraddress;
 
         /// <summary>
-        /// Btnsend control.
+        /// lbl_customerphone control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Btnsend;
+        protected global::System.Web.UI.WebControls.Label lbl_customerphone;
 
         /// <summary>
-        /// lbl_error control.
+        /// lbl_shmeli control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl_error;
+        protected global::System.Web.UI.WebControls.Label lbl_shmeli;
 
         /// <summary>
-        /// rb_dargah control.
+        /// lbl_kif control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList rb_dargah;
+        protected global::System.Web.UI.WebControls.Label lbl_kif;
 
         /// <summary>
-        /// txt_mablagh control.
+        /// lbl_points control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_mablagh;
+        protected global::System.Web.UI.WebControls.Label lbl_points;
 
         /// <summary>
-        /// linkdargah control.
+        /// lbl_totalbed control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button linkdargah;
+        protected global::System.Web.UI.WebControls.Label lbl_totalbed;
 
         /// <summary>
-        /// txt_pr control.
+        /// Master property.
         /// </summary>
         /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
+        /// Auto-generated property.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_pr;
-
-        /// <summary>
-        /// Btn_fkif control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Btn_fkif;
+        public new narsShop.mst Master
+        {
+            get
+            {
+                return ((narsShop.mst)(base.Master));
+            }
+        }
     }
 }

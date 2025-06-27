@@ -35,26 +35,28 @@
                                 <button class="nav-link" id="v-pills-wishlist-tab"   aria-selected="false">
                                     <i
                                         class="fa-light fa fa-shopping-cart"></i>اقساط من</button>
-                                <button class="nav-link" id="v-pills-wishlist-tab1" data-bs-toggle="pill"
-                                    data-bs-target="#v-pills-wishlist" type="button" role="tab"
-                                    aria-controls="v-pills-wishlist" aria-selected="false">
-                                    <i
-                                        class="fa-light fa fa-dollar"></i>شارژ کیف پول</button>
-                                <button class="nav-link" id="v-pills-wishlist-tab2"  
-                                    aria-controls="v-pills-wishlist" aria-selected="false">
-                                    <i
-                                        class="fa-light fa fa-comment"></i>پشتیبانی سایت</button>
+                               
+
+                                <asp:LinkButton ID="LinkButton1" runat="server" CssClass="nav-link" PostBackUrl="/pages/customercharge.aspx?type=W">
+                                    
+                                    <i class="fa-light fa fa-dollar"></i>شارژ کیف پول</asp:LinkButton>
+
+
+                                 <asp:LinkButton ID="btnSoport" runat="server" CssClass="nav-link" PostBackUrl="/pages/customerticket.aspx">
+                                    <i class="fa-light fa fa-comment"></i>پشتیبانی سایت </asp:LinkButton>
+
+
                                 <asp:LinkButton ID="btnShop" runat="server" CssClass="nav-link" PostBackUrl="/index.aspx">
-    <i class="fa-light fa fa-shopping-cart"></i> فروشگاه 
-</asp:LinkButton>
+                                <i class="fa-light fa fa-shopping-cart"></i> فروشگاه 
+                                </asp:LinkButton>
 
 
 
-                              <%--  <button class="nav-link" id="v-pills-settings-tab" data-bs-toggle="pill"
+                                <button class="nav-link" id="v-pills-settings-tab" data-bs-toggle="pill"
                                     data-bs-target="#v-pills-settings" type="button" role="tab"
                                     aria-controls="v-pills-settings" aria-selected="false">
                                     <i
-                                        class="fa-regular fa-gear"></i>تنظیمات</button>--%>
+                                        class="fa-regular fa-gear"></i>تنظیمات</button>
                                 <asp:LinkButton ID="btnExists" runat="server" CssClass="nav-link" OnClick="btnExist_Click">
                                  <i class="fa-solid fa-sign-out-alt"></i> خروج از حساب
                                 </asp:LinkButton>
@@ -413,7 +415,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="tab-pane fade" id="v-pills-wishlist" role="tabpanel"
+                   <%--     <div class="tab-pane fade" id="v-pills-wishlist" role="tabpanel"
                             aria-labelledby="v-pills-wishlist-tab" tabindex="0">
                             <!-- Wishlist Section Start -->
                             <div class="wishlist-wrapper fix bg-white">
@@ -472,58 +474,17 @@
                                                 </div>
                                             </div>
                                         </div>
+                                        </section>
                                 </div>
-                                </section>
+                                
    <!-- Faq Section E N D  -->
                             </div>
-                        </div>
+                        </div>--%>
                     </div>
-                  <%--  <div class="tab-pane fade" id="v-pills-settings" role="tabpanel"
+                    <div class="tab-pane fade" id="v-pills-settings" role="tabpanel"
                         aria-labelledby="v-pills-settings-tab" tabindex="0">
                         <div class="container">
-                            <!-- Account Settings -->
-                            <div class="account-settings">
-                                <h4 class="section-title">تنظیمات حساب کاربری</h4>
-                                <div class="form-wrapper">
-                                    <div class="row">
-                                        <div class="col-md-8">
-                                            <form>
-                                                <div class="row g-3">
-                                                    <div class="col-md-6">
-                                                        <label for="firstName" class="form-label">نام کوچک</label>
-                                                        <input type="text" class="form-control" id="firstName"
-                                                            placeholder="نام کوچک">
-                                                    </div>
-                                                    <div class="col-md-6">
-                                                        <label for="lastName" class="form-label">نام خانوادگی</label>
-                                                        <input type="text" class="form-control" id="lastName"
-                                                            placeholder="نام خانوادگی">
-                                                    </div>
-                                                    <div class="col-md-12">
-                                                        <label for="email" class="form-label">ایمیل</label>
-                                                        <input type="email" class="form-control" id="email"
-                                                            placeholder="test@gmail.com">
-                                                    </div>
-                                                    <div class="col-md-12">
-                                                        <label for="phoneNumber" class="form-label">شماره موبایل</label>
-                                                        <input type="tel" class="form-control" id="phoneNumber"
-                                                            placeholder="(+98) 999999">
-                                                    </div>
-                                                </div>
-                                                <button type="submit" class="theme-btn mt-3">ذخیره تنظیمات</button>
-                                            </form>
-                                        </div>
-                                        <div class="col-md-4 text-center">
-                                            <div class="profile-image-wrapper">
-                                                <img src="/assets/images/dashboard/dashboard-settings-profile.png"
-                                                    alt="Profile" class="img-fluid rounded-circle mb-3">
-                                                <button class="theme-btn">انتخاب عکس</button>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
+                        
 
                             <!-- Billing Address -->
                             <div class="billing-address mt-4">
@@ -532,55 +493,9 @@
                                     <div class="row mb-4">
                                         <form class="row g-3">
                                             <div class="col-md-6">
-                                                <label for="billingFirstName" class="form-label">نام کوچک</label>
-                                                <input type="text" class="form-control" id="billingFirstName"
-                                                    placeholder="نام">
-                                            </div>
-                                            <div class="col-md-6">
-                                                <label for="billingLastName" class="form-label">نام خانوادگی</label>
-                                                <input type="text" class="form-control" id="billingLastName"
-                                                    placeholder="نام خانوادگی">
-                                            </div>
-                                            <div class="col-md-6">
-                                                <label for="companyName" class="form-label">نام شرکت (اختیاری)</label>
-                                                <input type="text" class="form-control" id="companyName"
-                                                    placeholder="نام شرکت">
-                                            </div>
-                                            <div class="col-md-6">
-                                                <label for="streetAddress" class="form-label">ادرس خیابان</label>
-                                                <input type="text" class="form-control" id="streetAddress"
-                                                    placeholder="خیابان  ">
-                                            </div>
-                                            <div class="col-md-4">
-                                                <label for="country" class="form-label">کشور/زبان</label>
-                                                <select id="country" class="form-select">
-                                                    <option selected>ایران</option>
-                                                    <option>کانادا</option>
-                                                    <option>آمریکا</option>
-                                                </select>
-                                            </div>
-                                            <div class="col-md-4">
-                                                <label for="state" class="form-label">شهر</label>
-                                                <select id="state" class="form-select">
-                                                    <option selected>تهران</option>
-                                                    <option>تورنتو</option>
-                                                    <option>واشنتن</option>
-                                                </select>
-                                            </div>
-                                            <div class="col-md-4">
-                                                <label for="zipCode" class="form-label">کدپستی</label>
-                                                <input type="text" class="form-control" id="zipCode"
-                                                    placeholder="20033">
-                                            </div>
-                                            <div class="col-md-6">
-                                                <label for="billingEmail" class="form-label">ایمیل</label>
-                                                <input type="email" class="form-control" id="billingEmail"
-                                                    placeholder="test@gmail.com">
-                                            </div>
-                                            <div class="col-md-6">
-                                                <label for="billingPhone" class="form-label">شماره موبایل</label>
-                                                <input type="tel" class="form-control" id="billingPhone"
-                                                    placeholder="(+98) 9305-0123">
+                                                 
+                                                <input type="text" aria-multiline="true" class="form-control" id="billingFirstName"
+                                                    placeholder="آدرس...">
                                             </div>
                                             <div class="col-12">
                                                 <button type="submit" class="theme-btn mt-3">ذخیره تنظیمات</button>
@@ -590,34 +505,9 @@
                                 </div>
                             </div>
 
-                            <!-- Change Password -->
-                            <div class="change-password mt-4">
-                                <h4 class="section-title">تغییر رمز عبور</h4>
-                                <div class="form-wrapper">
-                                    <form class="row g-3">
-                                        <div class="col-md-4">
-                                            <label for="currentPassword" class="form-label">تکرار پسورد</label>
-                                            <input type="password" class="form-control" id="currentPassword"
-                                                placeholder="رمز عبور فعلی">
-                                        </div>
-                                        <div class="col-md-4">
-                                            <label for="newPassword" class="form-label">رمز عبور جدید</label>
-                                            <input type="password" class="form-control" id="newPassword"
-                                                placeholder="رمز جدید">
-                                        </div>
-                                        <div class="col-md-4">
-                                            <label for="confirmPassword" class="form-label">تایید رمز عبور</label>
-                                            <input type="password" class="form-control" id="confirmPassword"
-                                                placeholder="تایید رمز">
-                                        </div>
-                                        <div class="col-12">
-                                            <button type="submit" class="theme-btn mt-3">تغییر رمز عبور</button>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
+                          
                         </div>
-                    </div>--%>
+                    </div>
                     
                 </div>
             </div>

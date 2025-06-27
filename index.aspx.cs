@@ -12,9 +12,7 @@ namespace narsShop
         protected void Page_Load(object sender, EventArgs e)
         {
             ((Main)this.Master).ShowBbreadcumb = false;
-            ((Main)this.Master).showsectionShop = false;
-           
-            
+
         }
     }
 }

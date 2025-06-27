@@ -7,137 +7,119 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace narsShop.pages
+namespace narsShop.UDC
 {
 
 
-    public partial class customercharge
+    public partial class CustomerSidebar
     {
 
         /// <summary>
-        /// CustomerSidebar1 control.
+        /// lbl_customername control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::narsShop.UDC.CustomerSidebar CustomerSidebar1;
+        protected global::System.Web.UI.WebControls.Label lbl_customername;
 
         /// <summary>
-        /// lbl_title control.
+        /// lbl_customercode control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl_title;
+        protected global::System.Web.UI.WebControls.Label lbl_customercode;
 
         /// <summary>
-        /// lbl_subtit control.
+        /// lbl_customeraddress control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl_subtit;
+        protected global::System.Web.UI.WebControls.Label lbl_customeraddress;
 
         /// <summary>
-        /// lbl_notif control.
+        /// lbl_customerphone control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl_notif;
+        protected global::System.Web.UI.WebControls.Label lbl_customerphone;
 
         /// <summary>
-        /// txtkart control.
+        /// lbl_shmeli control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtkart;
+        protected global::System.Web.UI.WebControls.Label lbl_shmeli;
 
         /// <summary>
-        /// txtprice control.
+        /// lbl_kif control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtprice;
+        protected global::System.Web.UI.WebControls.Label lbl_kif;
 
         /// <summary>
-        /// txtpeigiri control.
+        /// lbl_points control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtpeigiri;
+        protected global::System.Web.UI.WebControls.Label lbl_points;
 
         /// <summary>
-        /// Btnsend control.
+        /// lbl_totalbed control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Btnsend;
+        protected global::System.Web.UI.WebControls.Label lbl_totalbed;
 
         /// <summary>
-        /// lbl_error control.
+        /// LinkButton1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl_error;
+        protected global::System.Web.UI.WebControls.LinkButton LinkButton1;
 
         /// <summary>
-        /// rb_dargah control.
+        /// btnSoport control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList rb_dargah;
+        protected global::System.Web.UI.WebControls.LinkButton btnSoport;
 
         /// <summary>
-        /// txt_mablagh control.
+        /// btnShop control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_mablagh;
+        protected global::System.Web.UI.WebControls.LinkButton btnShop;
 
         /// <summary>
-        /// linkdargah control.
+        /// btnExists control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button linkdargah;
-
-        /// <summary>
-        /// txt_pr control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_pr;
-
-        /// <summary>
-        /// Btn_fkif control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Btn_fkif;
+        protected global::System.Web.UI.WebControls.LinkButton btnExists;
     }
 }

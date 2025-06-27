@@ -15,21 +15,39 @@ namespace narsShop.pages
     {
 
         /// <summary>
-        /// lbl_productrow1 control.
+        /// sectionShop control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl_productrow1;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl sectionShop;
 
         /// <summary>
-        /// btn_add control.
+        /// rptProducts control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btn_add;
+        protected global::System.Web.UI.WebControls.Repeater rptProducts;
+
+        /// <summary>
+        /// customPagination control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl customPagination;
+
+        /// <summary>
+        /// litPagination control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal litPagination;
     }
 }
