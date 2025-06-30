@@ -8,6 +8,7 @@
     <div class="dashboard-section section-padding fix">
         <div class="container">
             <div class="row">
+
             <uc:CustomerSidebar ID="CustomerSidebar1" runat="server" />
                 <div class="col-xl-9">
                  <div class="order-history2">

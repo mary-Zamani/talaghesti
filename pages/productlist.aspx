@@ -10,7 +10,7 @@
 
                     <asp:Repeater ID="rptProducts" runat="server">
                         <ItemTemplate>
-                            <div class="col-xl-3 col-md-6">
+                            <div class="col-xl-3-1  col-md-6">
                                 <div class="best-seller-product-items-two item-border">
                                     <div class="icon-box2">
                                         <button data-bs-toggle="modal" data-bs-target="#exampleModal2">

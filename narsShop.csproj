@@ -618,6 +618,7 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\bootstrap.rtl.css" />
     <Content Include="Content\bootstrap.rtl.min.css" />
+    <Content Include="img\010.png" />
     <Content Include="index.aspx" />
     <Content Include="pages\customeraccount.aspx" />
     <Content Include="pages\customercharge.aspx" />

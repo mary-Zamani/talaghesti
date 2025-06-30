@@ -132,12 +132,6 @@ namespace narsShop
             DataView basket = sqhand.SqlExecute(stsql, "dv");
 
 
-
-
-
-            if (basket.Count == 0)
-                return olgoo.Replace("[count]", "");
-            else
                 return olgoo.Replace("[count]", basket.Count.ToString().Trim());
 
           

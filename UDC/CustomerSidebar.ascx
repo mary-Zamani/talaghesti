@@ -52,9 +52,9 @@
                                             <asp:Label ID="lbl_totalbed" runat="server" /></td>
                                     </tr>
                                 </table>
-
-                                <button class="nav-link" id="v-pills-wishlist-tab" aria-selected="false">
-                                    <i class="fa-light fa fa-shopping-cart"></i>اقساط من</button>
+ 
+                                <asp:LinkButton ID="LinkButton2" runat="server" CssClass="nav-link" PostBackUrl="/pages/customeraccount.aspx">
+                                <i class="fa-light fa fa-shopping-cart"></i>اقساط من</asp:LinkButton>
 
                                 <asp:LinkButton ID="LinkButton1" runat="server" CssClass="nav-link" PostBackUrl="/pages/customercharge.aspx?type=W">
                                     <i class="fa-light fa fa-dollar"></i>شارژ کیف پول</asp:LinkButton>

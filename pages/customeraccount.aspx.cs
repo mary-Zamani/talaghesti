@@ -24,26 +24,16 @@ namespace narsShop.pages
             if (tn.Token == null)
                 Response.Redirect("~");
 
-            lbl_customername.Text = tn.Name;
-            lblName.Text = tn.Name;
-            lbl_customerphone.Text = tn.mobileno;
-            lblMobile.Text= tn.mobileno;
-            lbl_customercode.Text = tn.vas;
-            Dictionary<string, string> customerdic = decode.customerinfo(tn.Token, Session["apiurl"].ToString());
-            if (customerdic.Count > 0)
+           
+           
+            if (!Page.IsPostBack)
             {
-                lbl_kif.Text = myconvert.todecimal(customerdic["walet"]).ToString("0,0");
-                lbl_totalbed.Text = myconvert.todecimal(customerdic["mande"]).ToString("0,0");
-                lbl_points.Text = customerdic["point"];
-                lbl_customeraddress.Text = customerdic["address"];
-                lblAddress.Text= customerdic["address"];    
-                lbl_shmeli.Text = customerdic["shmeli"];
+                foreach (string factorno in dplist())
+                {
+                    lbl_customerdps.Text += dptable(factorno, tn.vas);
+                }
             }
-            foreach (string factorno in dplist())
-            {
-
-                lbl_customerdps.Text += dptable(factorno, tn.vas);
-            }
+          
         }
 
         string dptable(string thisfactor, string vascode, bool Cb_showalldp = false)
@@ -68,7 +58,7 @@ namespace narsShop.pages
 
             respond = $"<div class=\"mb-f justify-content-between\"> " +
                       $"<div class=\"\">  " +
-                      $"<div class=\"card bg-primary border-light shadow-soft\">" +
+                      $"<div class=\"card   border-light shadow-soft\">" +
                       $"<div class=\"card-body\">";
             respond += "<h5 class=\"h5 card-title mt-3\">دفتر قسط شماره : " + thisfactor + "<br>";
             if (factorinfo1.details["sta"].ToString().Equals("S"))
@@ -94,7 +84,7 @@ namespace narsShop.pages
             }
             respond += "</h5>";
 
-            respond += "<div class=\"row mb-f justify-content-between\">";
+            respond += "<div class=\"row mb-f justify-content-between\" style=\"margin-top:30px\">";
             respond += "<div class=\"col mb-1 \" style=\"text-align:right;max-width:300px\">";
             respond += "<h6>دفتر قسط</h6>";
             respond += "<table class=\"table table-hover shadow-inset rounded\">" +
@@ -175,7 +165,7 @@ namespace narsShop.pages
 
             respond += "<div class=\"row mb-f justify-content-between\">";
             respond += "<div class=\"col-lg-6 col-sm-8 mb-1\" style=\"float:right;text-align:right\">";
-            respond += $"<div class=\"card pr-2 bg-primary shadow-soft border-light\">";
+            respond += $"<div class=\"card pr-2   shadow-soft border-light\">";
             respond += "بدهی از این فاکتور: " + factorinfo1.aslbedehi.ToString("0,0") + "<br>";
             if (factorinfo1.Fdetails == null && factorinfo1.Rdetails == null)
             {
@@ -207,7 +197,7 @@ namespace narsShop.pages
             }
             respond += "</div> </div>";
             respond += "<div class=\"col-lg-6 col-sm-4 mb-1 \" style=\"text-align:right\">";
-            respond += $"<a href=\"customercharge.aspx?type=D&factor=" + thisfactor + "\" class=\"btn btn-info btn-block\"><i class=\"fa fa-pencil\"></i> پرداخت قسط</a> ";
+            respond += $"<a href=\"customercharge.aspx?type=D&factor=" + thisfactor + "\" class=\"btn  theme-btn style6 btn-block\"><i class=\"fa fa-pencil\"></i> پرداخت قسط</a> ";
             respond += "</div></div>";
   
             respond += $" </div>\r\n          </div>\r\n        </div>\r\n      </div>\r\n<br>";

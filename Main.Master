@@ -294,7 +294,7 @@
                         <div class="header-main">
                             <div class="header-left">
                                 <div class="logo">
-                                    <a href="index.aspx" class="header-logo">
+                                    <a href="/index.aspx" class="header-logo">
                                         <img src="/assets/images/logo.png" style="width: 100px" alt="logo-img">
                                     </a>
                                 </div>
@@ -502,7 +502,7 @@
         <section class="feature-section section-padding2 fix">
             <div class="container">
                 <div class="row g-5">
-                    <div class="col-xl-3 col-md-6">
+                    <div class="col-xl-3-1 col-md-6">
                         <div class="feature-box-item-three">
                             <div class="feature-box-item-three__icon">
                                 <img src="/assets/images/home-6/icon/01.svg" alt="icon">
@@ -513,7 +513,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-3 col-md-6">
+                    <div class="col-xl-3-1 col-md-6">
                         <div class="feature-box-item-three">
                             <div class="feature-box-item-three__icon">
                                 <img src="/assets/images/home-6/icon/02.svg" alt="icon">
@@ -524,7 +524,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-3 col-md-6">
+                    <div class="col-xl-3-1 col-md-6">
                         <div class="feature-box-item-three">
                             <div class="feature-box-item-three__icon">
                                 <img src="/assets/images/home-6/icon/03.svg" alt="icon">
@@ -535,7 +535,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-3 col-md-6">
+                    <div class="col-xl-3-1 col-md-6">
                         <div class="feature-box-item-three">
                             <div class="feature-box-item-three__icon">
                                 <img src="/assets/images/home-6/icon/04.svg" alt="icon">
@@ -627,10 +627,10 @@
             <div class="footer-widgets-wrapper">
                 <div class="container">
                     <div class="row">
-                        <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".2s">
+                        <div class="col-xl-3-1 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".2s">
                             <div class="single-footer-widget">
                                 <div class="widget-head">
-                                    <a href="index.html">
+                                    <a href="/index.aspx">
                                         <img src="/assets/images/image/logo.png" style="width: 150Px" alt="logo-img">
                                     </a>
                                 </div>
@@ -641,7 +641,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-xl-3 col-lg-4 col-md-6 ps-lg-5 wow fadeInUp" data-wow-delay=".4s">
+                        <div class="col-xl-3-1 col-lg-4 col-md-6 ps-lg-5 wow fadeInUp" data-wow-delay=".4s">
                             <div class="single-footer-widget">
                                 <div class="widget-head">
                                     <h3 class="style4">اطلاعات فروشگاه</h3>
@@ -674,7 +674,7 @@
                                 </ul>
                             </div>
                         </div>
-                        <div class="col-xl-3 col-lg-4 col-md-6 ps-lg-5 wow fadeInUp" data-wow-delay=".6s">
+                        <div class="col-xl-3-1 col-lg-4 col-md-6 ps-lg-5 wow fadeInUp" data-wow-delay=".6s">
                             <div class="single-footer-widget">
                                 <div class="widget-head">
                                     <h3 class="style4">اطلاعات تماس</h3>
@@ -707,14 +707,14 @@
                                 </ul>
                             </div>
                         </div>
-                        <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".8s">
+                        <div class="col-xl-3-1 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".8s">
                             <div class="single-footer-widget">
                                 <div class="widget-head">
                                     <h3 class="style4">نمادهای اعتماد</h3>
                                 </div>
                                 <div class="footer-content">
 
-                                    <img src="/assets/images/image/next-pay-logo.png" style="width: 100px" alt="logo-img">
+                                    <img src="/img/010.png" style="width: 100px" alt="logo-img">
                                 </div>
                             </div>
                         </div>

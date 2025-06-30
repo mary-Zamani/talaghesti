@@ -207,7 +207,7 @@
                         <div class="tab-pane fade show active" id="pills-one" role="tabpanel"
                             aria-labelledby="pills-one-tab">
                             <div class="row g-4">
-                                <div class="col-xl-3 col-md-6">
+                                <div class="col-xl-3-1 col-md-6">
                                     <div class="best-seller-product-items-two">
                                         <div class="icon-box2">
                                             <button data-bs-toggle="modal" data-bs-target="#exampleModal2">
@@ -231,7 +231,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-xl-3 col-md-6">
+                                <div class="col-xl-3-1 col-md-6">
                                     <div class="best-seller-product-items-two">
                                         <div class="icon-box2">
                                             <button data-bs-toggle="modal" data-bs-target="#exampleModal2">
@@ -255,7 +255,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-xl-3 col-md-6">
+                                <div class="col-xl-3-1 col-md-6">
                                     <div class="best-seller-product-items-two">
                                         <div class="icon-box2">
                                             <button data-bs-toggle="modal" data-bs-target="#exampleModal2">
@@ -279,7 +279,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-xl-3 col-md-6">
+                                <div class="col-xl-3-1 col-md-6">
                                     <div class="best-seller-product-items-two">
                                         <div class="icon-box2">
                                             <button data-bs-toggle="modal" data-bs-target="#exampleModal2">
@@ -303,7 +303,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-xl-3 col-md-6">
+                                <div class="col-xl-3-1 col-md-6">
                                     <div class="best-seller-product-items-two">
                                         <div class="icon-box2">
                                             <button data-bs-toggle="modal" data-bs-target="#exampleModal2">
@@ -327,7 +327,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-xl-3 col-md-6">
+                                <div class="col-xl-3-1 col-md-6">
                                     <div class="best-seller-product-items-two">
                                         <div class="icon-box2">
                                             <button data-bs-toggle="modal" data-bs-target="#exampleModal2">
@@ -352,7 +352,7 @@
                                     </div>
                                 </div>
 
-                                <div class="col-xl-3 col-md-6">
+                                <div class="col-xl-3-1 col-md-6">
                                     <div class="best-seller-product-items-two">
                                         <div class="icon-box2">
                                             <button data-bs-toggle="modal" data-bs-target="#exampleModal2">
@@ -376,7 +376,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-xl-3 col-md-6">
+                                <div class="col-xl-3-1 col-md-6">
                                     <div class="best-seller-product-items-two">
                                         <div class="icon-box2">
                                             <button data-bs-toggle="modal" data-bs-target="#exampleModal2">
@@ -400,7 +400,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-xl-3 col-md-6">
+                                <div class="col-xl-3-1 col-md-6">
                                     <div class="best-seller-product-items-two">
                                         <div class="icon-box2">
                                             <button data-bs-toggle="modal" data-bs-target="#exampleModal2">
@@ -424,7 +424,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-xl-3 col-md-6">
+                                <div class="col-xl-3-1 col-md-6">
                                     <div class="best-seller-product-items-two">
                                         <div class="icon-box2">
                                             <button data-bs-toggle="modal" data-bs-target="#exampleModal2">
@@ -448,7 +448,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-xl-3 col-md-6">
+                                <div class="col-xl-3-1 col-md-6">
                                     <div class="best-seller-product-items-two">
                                         <div class="icon-box2">
                                             <button data-bs-toggle="modal" data-bs-target="#exampleModal2">
@@ -473,7 +473,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-xl-3 col-md-6">
+                                <div class="col-xl-3-1 col-md-6">
                                     <div class="best-seller-product-items-two">
                                         <div class="icon-box2">
                                             <button data-bs-toggle="modal" data-bs-target="#exampleModal2">
@@ -498,7 +498,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-xl-3 col-md-6">
+                                <div class="col-xl-3-1 col-md-6">
                                     <div class="best-seller-product-items-two">
                                         <div class="icon-box2">
                                             <button data-bs-toggle="modal" data-bs-target="#exampleModal2">
@@ -522,7 +522,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-xl-3 col-md-6">
+                                <div class="col-xl-3-1 col-md-6">
                                     <div class="best-seller-product-items-two">
                                         <div class="icon-box2">
                                             <button data-bs-toggle="modal" data-bs-target="#exampleModal2">
@@ -546,7 +546,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-xl-3 col-md-6">
+                                <div class="col-xl-3-1 col-md-6">
                                     <div class="best-seller-product-items-two">
                                         <div class="icon-box2">
                                             <button data-bs-toggle="modal" data-bs-target="#exampleModal2">
@@ -571,7 +571,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-xl-3 col-md-6">
+                                <div class="col-xl-3-1 col-md-6">
                                     <div class="best-seller-product-items-two">
                                         <div class="icon-box2">
                                             <button data-bs-toggle="modal" data-bs-target="#exampleModal2">
@@ -601,7 +601,7 @@
                         </div>
                         <div class="tab-pane fade" id="pills-two" role="tabpanel" aria-labelledby="pills-two-tab">
                             <div class="row g-4">
-                                <div class="col-xl-3 col-md-6">
+                                <div class="col-xl-3-1 col-md-6">
                                     <div class="best-seller-product-items-two">
                                         <div class="icon-box2">
                                             <button data-bs-toggle="modal" data-bs-target="#exampleModal2">
@@ -625,7 +625,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-xl-3 col-md-6">
+                                <div class="col-xl-3-1 col-md-6">
                                     <div class="best-seller-product-items-two">
                                         <div class="icon-box2">
                                             <button data-bs-toggle="modal" data-bs-target="#exampleModal2">
@@ -654,7 +654,7 @@
                         </div>
                         <div class="tab-pane fade" id="pills-three" role="tabpanel" aria-labelledby="pills-three-tab">
                             <div class="row g-4">
-                                <div class="col-xl-3 col-md-6">
+                                <div class="col-xl-3-1 col-md-6">
                                     <div class="best-seller-product-items-two">
                                         <div class="icon-box2">
                                             <button data-bs-toggle="modal" data-bs-target="#exampleModal2">
@@ -678,7 +678,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-xl-3 col-md-6">
+                                <div class="col-xl-3-1 col-md-6">
                                     <div class="best-seller-product-items-two">
                                         <div class="icon-box2">
                                             <button data-bs-toggle="modal" data-bs-target="#exampleModal2">
@@ -702,7 +702,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-xl-3 col-md-6">
+                                <div class="col-xl-3-1 col-md-6">
                                     <div class="best-seller-product-items-two">
                                         <div class="icon-box2">
                                             <button data-bs-toggle="modal" data-bs-target="#exampleModal2">
@@ -726,7 +726,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-xl-3 col-md-6">
+                                <div class="col-xl-3-1 col-md-6">
                                     <div class="best-seller-product-items-two">
                                         <div class="icon-box2">
                                             <button data-bs-toggle="modal" data-bs-target="#exampleModal2">
@@ -755,7 +755,7 @@
                         </div>
                         <div class="tab-pane fade" id="pills-four" role="tabpanel" aria-labelledby="pills-four-tab">
                             <div class="row g-4">
-                                <div class="col-xl-3 col-md-6">
+                                <div class="col-xl-3-1 col-md-6">
                                     <div class="best-seller-product-items-two">
                                         <div class="icon-box2">
                                             <button data-bs-toggle="modal" data-bs-target="#exampleModal2">
@@ -780,7 +780,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-xl-3 col-md-6">
+                                <div class="col-xl-3-1 col-md-6">
                                     <div class="best-seller-product-items-two">
                                         <div class="icon-box2">
                                             <button data-bs-toggle="modal" data-bs-target="#exampleModal2">
@@ -809,7 +809,7 @@
                         </div>
                         <div class="tab-pane fade" id="pills-five" role="tabpanel" aria-labelledby="pills-five-tab">
                             <div class="row g-4">
-                                <div class="col-xl-3 col-md-6">
+                                <div class="col-xl-3-1 col-md-6">
                                     <div class="best-seller-product-items-two">
                                         <div class="icon-box2">
                                             <button data-bs-toggle="modal" data-bs-target="#exampleModal2">
@@ -833,7 +833,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-xl-3 col-md-6">
+                                <div class="col-xl-3-1 col-md-6">
                                     <div class="best-seller-product-items-two">
                                         <div class="icon-box2">
                                             <button data-bs-toggle="modal" data-bs-target="#exampleModal2">
@@ -857,7 +857,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-xl-3 col-md-6">
+                                <div class="col-xl-3-1 col-md-6">
                                     <div class="best-seller-product-items-two">
                                         <div class="icon-box2">
                                             <button data-bs-toggle="modal" data-bs-target="#exampleModal2">
@@ -882,7 +882,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-xl-3 col-md-6">
+                                <div class="col-xl-3-1 col-md-6">
                                     <div class="best-seller-product-items-two">
                                         <div class="icon-box2">
                                             <button data-bs-toggle="modal" data-bs-target="#exampleModal2">
@@ -912,7 +912,7 @@
                         </div>
                         <div class="tab-pane fade" id="pills-six" role="tabpanel" aria-labelledby="pills-six-tab">
                             <div class="row g-4">
-                                <div class="col-xl-3 col-md-6">
+                                <div class="col-xl-3-1 col-md-6">
                                     <div class="best-seller-product-items-two">
                                         <div class="icon-box2">
                                             <button data-bs-toggle="modal" data-bs-target="#exampleModal2">
@@ -936,7 +936,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-xl-3 col-md-6">
+                                <div class="col-xl-3-1 col-md-6">
                                     <div class="best-seller-product-items-two">
                                         <div class="icon-box2">
                                             <button data-bs-toggle="modal" data-bs-target="#exampleModal2">
@@ -960,7 +960,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-xl-3 col-md-6">
+                                <div class="col-xl-3-1 col-md-6">
                                     <div class="best-seller-product-items-two">
                                         <div class="icon-box2">
                                             <button data-bs-toggle="modal" data-bs-target="#exampleModal2">
@@ -985,7 +985,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-xl-3 col-md-6">
+                                <div class="col-xl-3-1 col-md-6">
                                     <div class="best-seller-product-items-two">
                                         <div class="icon-box2">
                                             <button data-bs-toggle="modal" data-bs-target="#exampleModal2">
